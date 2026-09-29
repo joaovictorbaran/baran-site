@@ -24,16 +24,33 @@ A `main` é produção: o Vercel publica automaticamente a cada merge, e cada PR
 
 ## Sobre este projeto
 
-- **Stack:** um único `index.html` estático, com CSS e JavaScript inline. Sem framework, sem build, sem `package.json`. Deploy pelo Vercel a partir da `main`.
+- **Stack:** um único `index.html` estático, com CSS, JavaScript e imagens (SVG e a foto do João, em data URI) embutidos no próprio arquivo. Sem framework, sem build, sem `package.json`. Deploy pelo Vercel a partir da `main`.
+- **Único arquivo externo:** `og.png` (1200×630), na raiz do repositório. Ele existe porque o WhatsApp busca a imagem da prévia do link por um endereço próprio. Não crie pasta `assets/` nem outros arquivos de imagem sem que a issue peça.
 - **Mantenha assim.** Não introduza framework, bundler, dependências npm ou novos arquivos de script sem que a issue peça explicitamente. Simplicidade é uma decisão, não uma limitação.
-- **CTAs do WhatsApp:** todo link de contato usa o atributo `data-wa`; o número e a mensagem ficam nas constantes `WHATSAPP` e `MENSAGEM` no `<script>` final. Não escreva links `wa.me` soltos no HTML.
-- **Estilo visual:** fonte Inter, paleta em tons de cinza definida nas variáveis de `:root`, azul (`--blue`) só para ação e destaque. Reutilize as variáveis e classes existentes em vez de criar cores ou tamanhos novos.
-- **Texto:** em português (pt-BR), direto, sem jargão técnico. Fale de resultado para a empresa, não de tecnologia.
+- **CTAs do WhatsApp:** todo link de contato usa o atributo `data-wa`. O número e a mensagem padrão ficam nas constantes `WHATSAPP` e `MENSAGEM` no `<script>` final. Um link pode ter mensagem própria com `data-wa="texto da mensagem"` (os links de cada serviço usam isso, para o João saber de qual serviço veio a conversa). Não escreva links `wa.me` soltos no HTML.
+- **Estilo visual:** fonte Inter, paleta em tons de cinza definida nas variáveis de `:root`, azul só para ação e destaque. Botões usam `--blue-button`; texto azul sobre fundo claro usa `--blue-hover`, para manter o contraste mínimo de 4,5:1. Reutilize as variáveis e classes existentes em vez de criar cores ou tamanhos novos.
+- **Movimento:** o título do hero, as parcelas do hero e a faixa de segmentos. Todo movimento fica dentro de `@media (prefers-reduced-motion: no-preference)`. Não adicione animações novas sem a issue pedir.
+- **Prévia de compartilhamento:** as tags `og:image`, `og:url` e `canonical` apontam para `https://barantecnologia.com.br/`. O `og.png` repete o título do hero; se o título mudar, a issue deve pedir um novo `og.png`.
+- **Texto:** em português (pt-BR), direto, sem jargão técnico, falando de resultado para a empresa.
+
+## Regras de conteúdo (decididas pelo João)
+
+- **O site apresenta três serviços:** implementação de crediário próprio, automação de cobranças e sistemas sob medida.
+- **Não prometa o que pode mudar:** nada de prazos de implantação, tempo de resposta ou detalhes operacionais, como de qual número saem as mensagens de cobrança.
+- **Não mostre o que ainda não existe:** telas de produto, métricas ou depoimentos inventados. As ilustrações são abstratas e usam dados fictícios.
+- **Cases:** a Parcela Mais aparece como "Trajetória do fundador", nunca como cliente da Baran. Não mencione que o João foi sócio.
+- **Crédito:** consulta ao **Serasa**, sem citar SPC.
+- **Atendimento:** on-line em qualquer lugar e presencial em Santa Catarina.
+- **Rodapé:** "Baran Tecnologia LTDA", CNPJ 49.100.682/0001-01 e e-mail contato@joaobaran.com.
 
 ## Como testar antes do PR
 
-- Abra o `index.html` no navegador e confira o layout em largura de desktop e de celular (~375 px).
-- Clique em todos os CTAs e confirme que abrem o WhatsApp com a mensagem pré-preenchida.
+- Abra o `index.html` no navegador (funciona direto do arquivo) e confira o layout em largura de desktop e de celular (~375 px), sem rolagem lateral.
+- Clique em todos os CTAs e confirme que abrem o WhatsApp com a mensagem certa: os botões do topo, do hero, do final e o link do rodapé usam a mensagem padrão; os links de cada serviço, a mensagem do serviço.
+- Clique nos links de âncora do menu e do rodapé (`#servicos`, `#cases`, `#como-funciona`, `#duvidas`) e confirme que chegam na seção certa.
+- Ative "reduzir movimento" no sistema e confirme que a página continua correta, sem animação.
 - Confira que não há erros no console do navegador.
 
 **Se qualquer teste falhar:** não abra o PR. Comente na issue descrevendo o problema encontrado, mova de volta para `Todo` e pare. O João decide o próximo passo.
+
+**Depois do merge (João):** colar o endereço do site no WhatsApp e conferir título, descrição e imagem da prévia.
