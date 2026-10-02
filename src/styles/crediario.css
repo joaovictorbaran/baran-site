@@ -1,0 +1,49 @@
+  /* Crediário: parcelas, faixa de segmentos, nota e garantias */
+  /* Parcelas sendo pagas (ilustração animada do hero) */
+  .parcelas { margin: 80px auto 0; max-width: 820px; display: grid; grid-template-columns: repeat(10, 1fr); gap: 12px; }
+  .parcela { aspect-ratio: 4 / 5; border-radius: 16px; background: var(--space); border: 1px solid rgba(255,255,255,.08); display: flex; flex-direction: column; justify-content: space-between; padding: 12px; }
+  .parcela small { font-size: .75rem; color: rgba(210,210,215,.6); text-align: left; }
+  .parcela .i { width: 24px; height: 24px; stroke-width: 2.4; color: var(--white); opacity: 0; align-self: flex-end; }
+  .parcela.paga { background: var(--blue); border-color: var(--blue); }
+  .parcela.paga small { color: rgba(255,255,255,.85); }
+  .parcela.paga .i { opacity: 1; }
+
+  /* Faixa de segmentos */
+  .segmentos { border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); padding: 22px 0; overflow: hidden; }
+  .segmentos .trilho { display: flex; gap: 12px; width: max-content; }
+  .segmentos span { padding: 8px 16px; border: 1px solid rgba(210,210,215,.25); border-radius: 980px; color: var(--gray); font-size: .9375rem; white-space: nowrap; }
+
+  .nota { margin: 88px 0 0; padding: 28px 32px; border-radius: 24px; background: var(--light); font-size: 1.125rem; line-height: 1.5; color: rgba(29,29,31,.72); }
+  .nota b { color: var(--space); }
+  .feature .num { font-size: .9375rem; font-weight: 600; color: var(--blue-hover); }
+  .visual img { width: 100%; height: auto; }
+  .pillars.tres { grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  .faq .pillars.tres { row-gap: 56px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .parcelas { animation: rise 1s .35s cubic-bezier(.2,.7,.2,1) both; }
+    .parcela { animation: paga 9s ease infinite both; }
+    .parcela .i { animation: marca 9s ease infinite both; }
+    .parcela small { animation: rotulo 9s ease infinite both; }
+    .parcela:nth-child(2), .parcela:nth-child(2) .i, .parcela:nth-child(2) small { animation-delay: .45s; }
+    .parcela:nth-child(3), .parcela:nth-child(3) .i, .parcela:nth-child(3) small { animation-delay: .9s; }
+    .parcela:nth-child(4), .parcela:nth-child(4) .i, .parcela:nth-child(4) small { animation-delay: 1.35s; }
+    .parcela:nth-child(5), .parcela:nth-child(5) .i, .parcela:nth-child(5) small { animation-delay: 1.8s; }
+    .parcela:nth-child(6), .parcela:nth-child(6) .i, .parcela:nth-child(6) small { animation-delay: 2.25s; }
+    .parcela:nth-child(7), .parcela:nth-child(7) .i, .parcela:nth-child(7) small { animation-delay: 2.7s; }
+    .parcela:nth-child(8), .parcela:nth-child(8) .i, .parcela:nth-child(8) small { animation-delay: 3.15s; }
+    .parcela:nth-child(9), .parcela:nth-child(9) .i, .parcela:nth-child(9) small { animation-delay: 3.6s; }
+    .parcela:nth-child(10), .parcela:nth-child(10) .i, .parcela:nth-child(10) small { animation-delay: 4.05s; }
+    .segmentos .trilho { animation: desliza 40s linear infinite; }
+    .segmentos:hover .trilho { animation-play-state: paused; }
+    @keyframes paga { 0%, 8% { background: var(--space); border-color: rgba(255,255,255,.08); } 14%, 70% { background: var(--blue); border-color: var(--blue); } 80%, 100% { background: var(--space); border-color: rgba(255,255,255,.08); } }
+    @keyframes marca { 0%, 10% { opacity: 0; transform: scale(.6); } 16%, 70% { opacity: 1; transform: none; } 78%, 100% { opacity: 0; } }
+    @keyframes rotulo { 0%, 8% { color: rgba(210,210,215,.6); } 14%, 70% { color: rgba(255,255,255,.85); } 80%, 100% { color: rgba(210,210,215,.6); } }
+    @keyframes desliza { to { transform: translateX(-50%); } }
+  }
+  @media (prefers-reduced-motion: reduce) { .segmentos .trilho { padding-left: 24px; } }
+  @media (max-width: 900px) { .pillars.tres { grid-template-columns: 1fr; gap: 40px; } .faq .pillars.tres { row-gap: 40px; } }
+  @media (max-width: 560px) {
+    .parcelas { grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 56px; }
+    .parcela { border-radius: 12px; padding: 8px; }
+    .nota { padding: 24px; margin-top: 64px; }
+  }

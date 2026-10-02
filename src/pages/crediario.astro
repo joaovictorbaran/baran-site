@@ -1,0 +1,154 @@
+---
+import Base from '../layouts/Base.astro';
+import Cases from '../components/Cases.astro';
+import QuemSomos from '../components/QuemSomos.astro';
+import Contato from '../components/Contato.astro';
+import '../styles/crediario.css';
+import contrato_e_carne from '../assets/contrato-e-carne.svg';
+import calendario_de_vencimentos from '../assets/calendario-de-vencimentos.svg';
+import sistemas_conectados from '../assets/sistemas-conectados.svg';
+---
+<Base variant="crediario" title="Crediário | Baran Tecnologia" description="Crediário próprio, automação de cobranças e integração com os sistemas da sua empresa, para quem vende parcelado ou por mensalidade." ogTitle="Crediário | Baran Tecnologia" ogDescription="Crediário próprio, automação de cobranças e integração com os sistemas da sua empresa." url="https://barantecnologia.com.br/crediario" ogImage="https://barantecnologia.com.br/og.png" ogImageAlt="Baran Tecnologia: a tecnologia por trás das suas vendas a prazo.">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Crediário para quem vende a prazo.</h1>
+      <p>Crediário próprio, automação de cobranças e integração com os sistemas da sua empresa, para quem vende parcelado ou por mensalidade.</p>
+      <div class="actions">
+        <a class="btn btn-primary" data-wa href="#contato">Conversar no WhatsApp</a>
+        <a class="link" href="#servicos">Ver os serviços</a>
+      </div>
+      <div class="parcelas" aria-hidden="true">
+        <div class="parcela paga"><small>1/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>2/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>3/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>4/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>5/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>6/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>7/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>8/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>9/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>10/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="segmentos" aria-label="Segmentos que atendemos">
+    <div class="trilho">
+      <span>Cursos e escolas</span><span>Óticas</span><span>Móveis e eletro</span><span>Material de construção</span><span>Academias e estúdios</span><span>Autoescolas</span><span>Loteamentos</span><span>Moda e calçados</span>
+      <span aria-hidden="true">Cursos e escolas</span><span aria-hidden="true">Óticas</span><span aria-hidden="true">Móveis e eletro</span><span aria-hidden="true">Material de construção</span><span aria-hidden="true">Academias e estúdios</span><span aria-hidden="true">Autoescolas</span><span aria-hidden="true">Loteamentos</span><span aria-hidden="true">Moda e calçados</span>
+    </div>
+  </div>
+
+  <section class="section white" id="servicos">
+    <div class="wrap">
+      <h2>Crediário, cobrança e integração</h2>
+      <p class="intro">A gente desenvolve, implanta e acompanha. Você fala direto com quem constrói.</p>
+
+      <div class="features">
+        <div class="feature">
+          <div class="feature-text">
+            <span class="num">01</span>
+            <h3>Implementação de crediário próprio</h3>
+            <p class="lead">Para começar a vender a prazo a quem não tem cartão ou limite, com regra clara de quem pode comprar. Serve para lojas, cursos, autoescolas e outros negócios que vendem parcelado.</p>
+            <ul class="ticks">
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Regra de crédito proposta pela Baran e ajustada com você: limite, entrada e número de parcelas.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Consulta ao Serasa antes de aprovar.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Contrato assinado pelo celular e carnê digital.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Automação de cobranças já incluída.</li>
+            </ul>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero saber sobre a implementação de crediário próprio." href="#contato">Conversar sobre crediário</a>
+          </div>
+          <div class="visual"><img src={contrato_e_carne.src} alt="Contrato assinado e carnê de dez parcelas" width="480" height="320" loading="lazy"></div>
+        </div>
+
+        <div class="feature flip">
+          <div class="feature-text">
+            <span class="num">02</span>
+            <h3>Automação de cobranças</h3>
+            <p class="lead">Cobrança automatizada para as parcelas e mensalidades que você já vende.</p>
+            <ul class="ticks">
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Pix e boleto no nome da sua empresa, direto na sua conta.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Lembretes pelo WhatsApp antes, no dia e depois do vencimento.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Baixa automática e relatório todo mês.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Recuperação de atrasados: você paga com o que for recuperado.</li>
+            </ul>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero saber sobre a automação de cobranças." href="#contato">Conversar sobre cobranças</a>
+          </div>
+          <div class="visual"><img src={calendario_de_vencimentos.src} alt="Calendário com vencimentos pagos e lembrete" width="480" height="320" loading="lazy"></div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-text">
+            <span class="num">03</span>
+            <h3>Integração com os sistemas da empresa</h3>
+            <p class="lead">Para o crediário e a cobrança conversarem com o que a sua empresa já usa, sem você trocar o que já funciona.</p>
+            <ul class="ticks">
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Conexão com o seu sistema de vendas, ERP ou planilha.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Baixa automática dos pagamentos no seu sistema.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Painéis com parcelas a vencer, pagas e em atraso.</li>
+            </ul>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre integrar o crediário e a cobrança aos sistemas da minha empresa." href="#contato">Conversar sobre integrações</a>
+          </div>
+          <div class="visual"><img src={sistemas_conectados.src} alt="Sistemas conectados entre si" width="480" height="320" loading="lazy"></div>
+        </div>
+      </div>
+
+      <p class="nota"><b>Crediário ou cobrança?</b> A automação de cobranças cuida do que você já vendeu. O crediário próprio decide para quem vender a prazo e já inclui a cobrança.</p>
+    </div>
+  </section>
+
+  <Cases intro="Projeto de crédito e cobrança que o João já construiu e liderou." />
+
+  <section class="section" id="garantias">
+    <div class="wrap">
+      <h2>Seu dinheiro e suas regras continuam com você.</h2>
+      <div class="pillars tres">
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>O dinheiro cai na sua conta.</h3>
+          <p>Não recebemos nem guardamos nenhum valor. Cada Pix e boleto sai no nome da sua empresa.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>O cliente sabe de quem é a cobrança.</h3>
+          <p>Cada mensagem identifica a sua empresa e segue o tom que você aprovar, sempre com respeito e dentro do Código de Defesa do Consumidor.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></div>
+          <h3>Nós propomos, você aprova.</h3>
+          <p>A Baran propõe a regra de crédito, os acordos e o tom das mensagens. Você aprova e pode ajustar quando quiser.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white" id="como-funciona">
+    <div class="wrap">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><h3>Conversa</h3><p>Uma conversa, sem custo, para entender como a sua empresa vende e recebe hoje.</p></li>
+        <li><h3>Proposta</h3><p>Uma proposta de uma página, com escopo, prazo e preço.</p></li>
+        <li><h3>Implantação</h3><p>Configuramos tudo e treinamos a sua equipe.</p></li>
+        <li><h3>Acompanhamento</h3><p>Relatório todo mês e ajustes com base nos números.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <QuemSomos />
+
+  <section class="section light faq" id="duvidas">
+    <div class="wrap">
+      <h2>Dúvidas comuns</h2>
+      <div class="pillars tres">
+        <article class="pillar"><h3>Preciso trocar meu sistema?</h3><p>Não. Trabalhamos a partir do que você usa hoje, seja sistema ou planilha.</p></article>
+        <article class="pillar"><h3>O dinheiro passa pela Baran?</h3><p>Não. Pix e boleto são emitidos na conta da sua empresa. Não recebemos nem guardamos nenhum valor.</p></article>
+        <article class="pillar"><h3>Vocês atendem fora da minha cidade?</h3><p>Sim. Atendemos on-line em qualquer lugar e presencialmente em Santa Catarina.</p></article>
+        <article class="pillar"><h3>Quem define a regra de crédito?</h3><p>A Baran propõe, a partir da experiência de quem já construiu motores de análise de crédito. Você aprova e pode ajustar.</p></article>
+        <article class="pillar"><h3>E se o cliente não pagar?</h3><p>O risco do crédito continua sendo da sua empresa. Nosso trabalho é diminuí-lo com uma boa regra de crédito e uma cobrança que não esquece ninguém.</p></article>
+        <article class="pillar"><h3>Quanto custa?</h3><p>Depende do serviço e do volume de parcelas. Depois da primeira conversa, você recebe uma proposta de uma página com escopo, prazo e preço.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <Contato />
+</Base>

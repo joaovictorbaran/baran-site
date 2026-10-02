@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Sistemas conectados">
+  <path d="M190 160h40M250 160c40 0 40-80 80-80M250 160c40 0 40 80 80 80" fill="none" stroke="#D2D2D7" stroke-width="3"/>
+  <circle cx="240" cy="160" r="12" fill="#007AFF"/>
+  <rect x="48" y="104" width="148" height="112" rx="18" fill="#1D1D1F"/>
+  <text x="122" y="170" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" fill="#007AFF" text-anchor="middle">&lt;/&gt;</text>
+  <rect x="330" y="36" width="116" height="88" rx="16" fill="#FFFFFF"/>
+  <rect x="348" y="58" width="56" height="10" rx="5" fill="#1D1D1F"/>
+  <rect x="348" y="78" width="80" height="8" rx="4" fill="#D2D2D7"/>
+  <rect x="348" y="94" width="64" height="8" rx="4" fill="#D2D2D7"/>
+  <rect x="330" y="196" width="116" height="88" rx="16" fill="#FFFFFF"/>
+  <rect x="350" y="252" width="14" height="16" rx="3" fill="#D2D2D7"/>
+  <rect x="370" y="238" width="14" height="30" rx="3" fill="#D2D2D7"/>
+  <rect x="390" y="226" width="14" height="42" rx="3" fill="#007AFF"/>
+  <rect x="410" y="244" width="14" height="24" rx="3" fill="#D2D2D7"/>
+  <circle cx="330" cy="80" r="6" fill="#007AFF"/>
+  <circle cx="330" cy="240" r="6" fill="#007AFF"/>
+</svg>

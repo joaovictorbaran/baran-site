@@ -1,0 +1,136 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  variant: 'home' | 'crediario';
+  title: string;
+  description: string;
+  ogTitle: string;
+  ogDescription: string;
+  url: string;
+  ogImage: string;
+  ogImageAlt: string;
+}
+
+const { variant, title, description, ogTitle, ogDescription, url, ogImage, ogImageAlt } = Astro.props;
+const home = variant === 'home';
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta property="og:title" content={ogTitle}>
+<meta property="og:description" content={ogDescription}>
+<meta property="og:type" content="website">
+<meta property="og:url" content={url}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content={ogImageAlt}>
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href={url}>
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='45' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='700' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script is:inline>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    {home ? (<a class="wordmark" href="#topo" aria-label="Baran Tecnologia, início"><b>Baran</b><span>Tecnologia</span></a>) : (<a class="wordmark" href="/" aria-label="Baran Tecnologia, página inicial"><b>Baran</b><span>Tecnologia</span></a>)}
+    <nav class="nav-links" aria-label="Seções">
+      {home ? (<a href="#servicos">Serviços</a>) : (<a href="/">Todos os serviços</a>)}
+      {home ? (<a href="#como-pensamos">Como pensamos</a>) : (<a href="#servicos">Crediário</a>)}
+      <a href="#cases">Cases</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-primary btn-small" data-wa href="#contato">Conversar no WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <slot />
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="rodape">
+      <div class="marca">
+        {home ? (<a class="wordmark" href="#topo"><b>Baran</b><span>Tecnologia</span></a>) : (<a class="wordmark" href="/"><b>Baran</b><span>Tecnologia</span></a>)}
+        <p>Software house butique: sites, apps, sistemas, migração e IA.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <a data-wa href="#contato">WhatsApp</a>
+        <a href="mailto:contato@joaobaran.com">contato@joaobaran.com</a>
+        <a href="https://www.linkedin.com/in/joaovictorbaran" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div>
+        <h3>Navegação</h3>
+        {home ? (<a href="#servicos">Serviços</a>) : (<a href="/#servicos">Serviços</a>)}
+        {home ? (<a href="/crediario">Crediário e cobrança</a>) : (<a href="#topo">Crediário e cobrança</a>)}
+        <a href="#cases">Cases</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#duvidas">Dúvidas</a>
+      </div>
+      <div>
+        <h3>Empresa</h3>
+        <span>Baran Tecnologia LTDA</span>
+        <span style="white-space:nowrap">CNPJ 49.100.682/0001-01</span>
+      </div>
+    </div>
+    <div class="copy">&copy; <span id="ano">2026</span> Baran Tecnologia. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+<script is:inline>
+  const WHATSAPP = "5548936184688";
+  const MENSAGEM = "Olá! Vim pelo site da Baran e quero conversar sobre a minha empresa.";
+
+  // Guarda a origem do visitante (links com utm_source, utm_campaign ou ref) para a sessão inteira.
+  function limpa(v) { return (v || "").replace(/[^\w\-. À-ÿ]/g, "").slice(0, 60); }
+  const params = new URLSearchParams(location.search);
+  let origem = {};
+  try { origem = JSON.parse(sessionStorage.getItem("origem") || "{}"); } catch (e) {}
+  ["utm_source", "utm_campaign", "ref"].forEach(function (k) {
+    const v = limpa(params.get(k));
+    if (v) origem[k] = v;
+  });
+  try { sessionStorage.setItem("origem", JSON.stringify(origem)); } catch (e) {}
+
+  const partes = [];
+  if (origem.utm_source) partes.push("origem: " + origem.utm_source);
+  if (origem.utm_campaign) partes.push("campanha: " + origem.utm_campaign);
+  if (origem.ref) partes.push("indicação: " + origem.ref);
+  const etiqueta = partes.length ? "\n\n(" + partes.join(", ") + ")" : "";
+
+  // Todo link com data-wa abre o WhatsApp. Se o atributo tiver texto, ele vira a mensagem daquele link.
+  document.querySelectorAll("[data-wa]").forEach(function (a) {
+    const msg = (a.getAttribute("data-wa") || MENSAGEM) + etiqueta;
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+  document.getElementById("ano").textContent = new Date().getFullYear();
+
+  // As ilustrações das seções terminam de se desenhar quando entram na tela.
+  const alvos = document.querySelectorAll(".visual");
+  if ("IntersectionObserver" in window) {
+    const obs = new IntersectionObserver(function (itens) {
+      itens.forEach(function (i) { if (i.isIntersecting) { i.target.classList.add("in"); obs.unobserve(i.target); } });
+    }, { threshold: 0.35 });
+    alvos.forEach(function (el) { obs.observe(el); });
+  } else {
+    alvos.forEach(function (el) { el.classList.add("in"); });
+  }
+</script>
+</body>
+</html>
