@@ -30,13 +30,13 @@ A `main` é produção: o Vercel publica automaticamente a cada merge, e cada PR
 - **Origem do visitante:** os links com `utm_source`, `utm_campaign` e `ref` são lidos pelo script e acrescentados ao fim da mensagem do WhatsApp, por exemplo "(origem: linkedin, campanha: agencias_oferta3, indicação: nome)". Não remover.
 - **Estilo visual:** fonte Inter, paleta em tons de cinza definida nas variáveis de `:root`, azul só para ação e destaque. Botões usam `--blue-button`; texto azul sobre fundo claro usa `--blue-hover`, para manter o contraste mínimo de 4,5:1. Reutilize as variáveis e classes existentes em vez de criar cores ou tamanhos novos.
 - **Movimento:** o título do hero e as parcelas do hero (crediário), a faixa de segmentos, a entrada do hero da home (texto, ilustração e atalhos) e as ilustrações de serviço que terminam de se desenhar quando entram na tela (barra de progresso, pílulas e brilho da IA, via `IntersectionObserver`). Todo movimento fica dentro de `@media (prefers-reduced-motion: no-preference)`; com "reduzir movimento" a página aparece no estado final. Não adicione animações novas sem a issue pedir.
-- **Prévia de compartilhamento:** a home usa `og-home.png`; `crediario.html` usa `og.png`. `og:url` e `canonical` de cada página apontam para a própria URL (`https://barantecnologia.com.br/` e `https://barantecnologia.com.br/crediario.html`). Cada PNG repete o título do hero da sua página; se o título mudar, a issue deve pedir um novo PNG.
+- **Prévia de compartilhamento:** a home usa `og-home.png`; a página `/crediario` usa `og.png`. `og:url` e `canonical` de cada página apontam para a própria URL (`https://barantecnologia.com.br/` e `https://barantecnologia.com.br/crediario`). Cada PNG repete o título do hero da sua página; se o título mudar, a issue deve pedir um novo PNG.
 - **Texto:** em português (pt-BR), direto, sem jargão técnico, falando de resultado para a empresa. O subtítulo do hero da home não diz "software house". Texto atual: "Sites, apps, sistemas, migrações e IA, construídos de ponta a ponta por um CTO de fintech."
 
 ## Regras de conteúdo (decididas pelo João)
 
 - **Serviços na home:** cinco ofertas: Sites; Apps e sistemas; Migração de sistemas; IA e automação; Crediário e cobrança (esta com página própria).
-- **Serviços em `crediario.html`:** três: implementação de crediário próprio, automação de cobranças e integração com os sistemas da empresa.
+- **Serviços em `/crediario`:** três: implementação de crediário próprio, automação de cobranças e integração com os sistemas da empresa.
 - **Não prometa o que pode mudar:** nada de prazos de implantação, tempo de resposta ou detalhes operacionais, como de qual número saem as mensagens de cobrança.
 - **Não mostre o que ainda não existe:** depoimentos, logos de clientes e métricas de clientes da Baran são proibidos, assim como qualquer tela que pareça um produto real da Baran. As ilustrações usam dados fictícios.
 - **Exceção aprovada pelo João (ilustração do hero da home):** ela mostra um sistema de gestão **genérico** (painel e celular), com dados **fictícios** e endereço fictício (`app.suaempresa.com.br`). Fora isso, as ilustrações continuam abstratas.
@@ -50,8 +50,8 @@ A `main` é produção: o Vercel publica automaticamente a cada merge, e cada PR
 
 - Abra `index.html` e `crediario.html` no navegador (funcionam direto do arquivo) e confira o layout de cada uma em largura de desktop e de celular (~375 px), sem rolagem lateral.
 - Clique em todos os CTAs e confirme que abrem o WhatsApp com a mensagem certa: os botões do topo, do hero, do final e o link do rodapé usam a mensagem padrão; os links de cada serviço, a mensagem do serviço.
-- Clique nos links de âncora do menu e do rodapé de cada página e confirme que chegam na seção certa. Em `crediario.html`: `#servicos`, `#cases`, `#como-funciona`, `#duvidas`.
-- Confira os links entre as páginas (`/` e `crediario.html`).
+- Clique nos links de âncora do menu e do rodapé de cada página e confirme que chegam na seção certa. Em `/crediario`: `#servicos`, `#cases`, `#como-funciona`, `#duvidas`.
+- Confira os links entre as páginas (`/` e `/crediario`). O endereço sem extensão (`cleanUrls` no `vercel.json`) só funciona no preview do Vercel, não ao abrir o arquivo direto no navegador. No preview, confira também que `/crediario.html` redireciona para `/crediario` e `/index.html` para `/`.
 - Na home, confira os atalhos do hero (`#sites`, `#apps`, `#migracao`, `#ia`, `#crediario`).
 - Teste de origem: abra `/?utm_source=teste&utm_campaign=x&ref=y` e confira que a mensagem do WhatsApp termina com "(origem: teste, campanha: x, indicação: y)".
 - Ative "reduzir movimento" no sistema e confirme que a página continua correta, sem animação.
