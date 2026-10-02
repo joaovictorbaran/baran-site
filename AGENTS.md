@@ -52,7 +52,7 @@ A `main` é produção: o Vercel publica automaticamente a cada merge, e cada PR
 - Clique em todos os CTAs e confirme que abrem o WhatsApp com a mensagem certa: os botões do topo, do hero, do final e o link do rodapé usam a mensagem padrão; os links de cada serviço, a mensagem do serviço.
 - Clique nos links de âncora do menu e do rodapé de cada página e confirme que chegam na seção certa. Em `crediario.html`: `#servicos`, `#cases`, `#como-funciona`, `#duvidas`.
 - Confira os links entre as páginas (`/` e `crediario.html`).
-- Na home, confira os atalhos do hero (`#sites`, `#apps`, `#migracao`, `#ia`, `#credito`).
+- Na home, confira os atalhos do hero (`#sites`, `#apps`, `#migracao`, `#ia`, `#crediario`).
 - Teste de origem: abra `/?utm_source=teste&utm_campaign=x&ref=y` e confira que a mensagem do WhatsApp termina com "(origem: teste, campanha: x, indicação: y)".
 - Ative "reduzir movimento" no sistema e confirme que a página continua correta, sem animação.
 - Confira que não há erros no console do navegador.
