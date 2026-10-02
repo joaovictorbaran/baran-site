@@ -23,34 +23,40 @@ As tarefas vêm do **Linear**: time `baran` (prefixo `BAR`), projeto `baran-site
 A `main` é produção: o Vercel publica automaticamente a cada merge, e cada PR ganha um preview deploy. Inclua o link do preview no comentário final quando ele existir.
 
 ## Sobre este projeto
-
-- **Stack:** um único `index.html` estático, com CSS, JavaScript e imagens (SVG e a foto do João, em data URI) embutidos no próprio arquivo. Sem framework, sem build, sem `package.json`. Deploy pelo Vercel a partir da `main`.
-- **Único arquivo externo:** `og.png` (1200×630), na raiz do repositório. Ele existe porque o WhatsApp busca a imagem da prévia do link por um endereço próprio. Não crie pasta `assets/` nem outros arquivos de imagem sem que a issue peça.
+- **Stack:** dois arquivos HTML estáticos na raiz, `index.html` (home) e `crediario.html` (página interna), cada um com CSS, JavaScript e imagens embutidos (a foto do João em data URI nos dois). Sem framework, bundler ou `package.json` por enquanto. Deploy pelo Vercel a partir da `main`. A migração para **Astro** já está decidida (`docs/decisions/001-stack-do-site.md`); não introduza framework antes da issue de migração.
+- **Arquivos externos permitidos:** `og.png` (prévia do crediário) e `og-home.png` (prévia da home), ambos 1200×630, na raiz do repositório. Eles existem porque o WhatsApp busca a imagem da prévia do link por um endereço próprio. Não crie pasta `assets/` nem outros arquivos de imagem sem que a issue peça. A pasta `docs/` é só para documentação (decisões em `docs/decisions/`).
 - **Mantenha assim.** Não introduza framework, bundler, dependências npm ou novos arquivos de script sem que a issue peça explicitamente. Simplicidade é uma decisão, não uma limitação.
-- **CTAs do WhatsApp:** todo link de contato usa o atributo `data-wa`. O número e a mensagem padrão ficam nas constantes `WHATSAPP` e `MENSAGEM` no `<script>` final. Um link pode ter mensagem própria com `data-wa="texto da mensagem"` (os links de cada serviço usam isso, para o João saber de qual serviço veio a conversa). Não escreva links `wa.me` soltos no HTML.
+- **CTAs do WhatsApp:** todo link de contato usa o atributo `data-wa`. O número e a mensagem padrão ficam nas constantes `WHATSAPP` e `MENSAGEM` no `<script>` final de cada página. Um link pode ter mensagem própria com `data-wa="texto da mensagem"` (os links de cada serviço usam isso, para o João saber de qual serviço veio a conversa). Não escreva links `wa.me` soltos no HTML.
+- **Origem do visitante:** os links com `utm_source`, `utm_campaign` e `ref` são lidos pelo script e acrescentados ao fim da mensagem do WhatsApp, por exemplo "(origem: linkedin, campanha: agencias_oferta3, indicação: nome)". Não remover.
 - **Estilo visual:** fonte Inter, paleta em tons de cinza definida nas variáveis de `:root`, azul só para ação e destaque. Botões usam `--blue-button`; texto azul sobre fundo claro usa `--blue-hover`, para manter o contraste mínimo de 4,5:1. Reutilize as variáveis e classes existentes em vez de criar cores ou tamanhos novos.
-- **Movimento:** o título do hero, as parcelas do hero e a faixa de segmentos. Todo movimento fica dentro de `@media (prefers-reduced-motion: no-preference)`. Não adicione animações novas sem a issue pedir.
-- **Prévia de compartilhamento:** as tags `og:image`, `og:url` e `canonical` apontam para `https://barantecnologia.com.br/`. O `og.png` repete o título do hero; se o título mudar, a issue deve pedir um novo `og.png`.
-- **Texto:** em português (pt-BR), direto, sem jargão técnico, falando de resultado para a empresa.
+- **Movimento:** o título do hero e as parcelas do hero (crediário), a faixa de segmentos, a entrada do hero da home (texto, ilustração e atalhos) e as ilustrações de serviço que terminam de se desenhar quando entram na tela (barra de progresso, pílulas e brilho da IA, via `IntersectionObserver`). Todo movimento fica dentro de `@media (prefers-reduced-motion: no-preference)`; com "reduzir movimento" a página aparece no estado final. Não adicione animações novas sem a issue pedir.
+- **Prévia de compartilhamento:** a home usa `og-home.png`; `crediario.html` usa `og.png`. `og:url` e `canonical` de cada página apontam para a própria URL (`https://barantecnologia.com.br/` e `https://barantecnologia.com.br/crediario.html`). Cada PNG repete o título do hero da sua página; se o título mudar, a issue deve pedir um novo PNG.
+- **Texto:** em português (pt-BR), direto, sem jargão técnico, falando de resultado para a empresa. O subtítulo do hero da home não diz "software house". Texto atual: "Sites, apps, sistemas, migrações e IA, construídos de ponta a ponta por um CTO de fintech."
 
 ## Regras de conteúdo (decididas pelo João)
 
-- **O site apresenta três serviços:** implementação de crediário próprio, automação de cobranças e sistemas sob medida.
+- **Serviços na home:** cinco ofertas: Sites; Apps e sistemas; Migração de sistemas; IA e automação; Crediário e cobrança (esta com página própria).
+- **Serviços em `crediario.html`:** três: implementação de crediário próprio, automação de cobranças e integração com os sistemas da empresa.
 - **Não prometa o que pode mudar:** nada de prazos de implantação, tempo de resposta ou detalhes operacionais, como de qual número saem as mensagens de cobrança.
-- **Não mostre o que ainda não existe:** telas de produto, métricas ou depoimentos inventados. As ilustrações são abstratas e usam dados fictícios.
+- **Não mostre o que ainda não existe:** depoimentos, logos de clientes e métricas de clientes da Baran são proibidos, assim como qualquer tela que pareça um produto real da Baran. As ilustrações usam dados fictícios.
+- **Exceção aprovada pelo João (ilustração do hero da home):** ela mostra um sistema de gestão **genérico** (painel e celular), com dados **fictícios** e endereço fictício (`app.suaempresa.com.br`). Fora isso, as ilustrações continuam abstratas.
 - **Cases:** a Parcela Mais aparece como "Trajetória do fundador", nunca como cliente da Baran. Não mencione que o João foi sócio.
+- **Números da Parcela Mais:** o bloco `.numeros` (seção "Quem está por trás") só fica com a **confirmação do João**, que depende da conferência do acordo de saída (tarefa no Notion). Se ele não confirmar, o bloco é removido.
 - **Crédito:** consulta ao **Serasa**, sem citar SPC.
 - **Atendimento:** on-line em qualquer lugar e presencial em Santa Catarina.
 - **Rodapé:** "Baran Tecnologia LTDA", CNPJ 49.100.682/0001-01 e e-mail contato@joaobaran.com.
 
 ## Como testar antes do PR
 
-- Abra o `index.html` no navegador (funciona direto do arquivo) e confira o layout em largura de desktop e de celular (~375 px), sem rolagem lateral.
+- Abra `index.html` e `crediario.html` no navegador (funcionam direto do arquivo) e confira o layout de cada uma em largura de desktop e de celular (~375 px), sem rolagem lateral.
 - Clique em todos os CTAs e confirme que abrem o WhatsApp com a mensagem certa: os botões do topo, do hero, do final e o link do rodapé usam a mensagem padrão; os links de cada serviço, a mensagem do serviço.
-- Clique nos links de âncora do menu e do rodapé (`#servicos`, `#cases`, `#como-funciona`, `#duvidas`) e confirme que chegam na seção certa.
+- Clique nos links de âncora do menu e do rodapé de cada página e confirme que chegam na seção certa. Em `crediario.html`: `#servicos`, `#cases`, `#como-funciona`, `#duvidas`.
+- Confira os links entre as páginas (`/` e `crediario.html`).
+- Na home, confira os atalhos do hero (`#sites`, `#apps`, `#migracao`, `#ia`, `#credito`).
+- Teste de origem: abra `/?utm_source=teste&utm_campaign=x&ref=y` e confira que a mensagem do WhatsApp termina com "(origem: teste, campanha: x, indicação: y)".
 - Ative "reduzir movimento" no sistema e confirme que a página continua correta, sem animação.
 - Confira que não há erros no console do navegador.
 
 **Se qualquer teste falhar:** não abra o PR. Comente na issue descrevendo o problema encontrado, mova de volta para `Todo` e pare. O João decide o próximo passo.
 
-**Depois do merge (João):** colar o endereço do site no WhatsApp e conferir título, descrição e imagem da prévia.
+**Depois do merge (João):** colar o endereço de cada página no WhatsApp e conferir título, descrição e imagem da prévia.
