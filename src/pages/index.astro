@@ -1,0 +1,285 @@
+---
+import Base from '../layouts/Base.astro';
+import Cases from '../components/Cases.astro';
+import QuemSomos from '../components/QuemSomos.astro';
+import Contato from '../components/Contato.astro';
+---
+<Base variant="home" title="Baran Tecnologia | Software house butique: sites, apps, sistemas e IA" description="Baran Tecnologia: sites, apps, sistemas, migrações e IA, construídos de ponta a ponta por um CTO de fintech." ogTitle="Baran Tecnologia" ogDescription="Software sob medida para o seu negócio: sites, apps, sistemas, migração, IA e automação." url="https://barantecnologia.com.br/" ogImage="https://barantecnologia.com.br/og-home.png" ogImageAlt="Baran Tecnologia: software sob medida para o seu negócio.">
+  <section class="hero hero-split">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1>Software sob medida para o seu negócio.</h1>
+        <p>Sites, apps, sistemas, migrações e IA, construídos de ponta a ponta por um CTO de fintech.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-wa href="#contato">Conversar no WhatsApp</a>
+          <a class="link" href="#servicos">Ver os serviços</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="30 30 930 470" role="img" aria-label="Ilustração de um sistema de gestão no computador e no celular, com avisos de parcela paga e de nota fiscal lida pela IA">
+  <g class="pc pc1">
+    <rect x="90" y="40" width="620" height="400" rx="20" fill="#1D1D1F" stroke="#fff" stroke-opacity=".1" stroke-width="1.5"/>
+    <path d="M90 89H190V440H110a20 20 0 0 1-20-20Z" fill="#161618"/>
+    <circle cx="116" cy="66" r="5" fill="#3A3A3C"/><circle cx="134" cy="66" r="5" fill="#3A3A3C"/><circle cx="152" cy="66" r="5" fill="#3A3A3C"/>
+    <rect x="190" y="54" width="230" height="24" rx="12" fill="#2C2C2E"/>
+    <text x="205" y="70" font-size="12" fill="#86868B">app.suaempresa.com.br</text>
+    <rect x="90" y="88" width="620" height="1" fill="#fff" opacity=".08"/>
+    <rect x="108" y="106" width="22" height="22" rx="7" fill="#0071E3"/>
+    <rect x="138" y="112" width="36" height="10" rx="5" fill="#F5F5F7"/>
+    <rect x="102" y="150" width="76" height="28" rx="8" fill="#2C2C2E"/><circle cx="116" cy="164" r="4" fill="#0071E3"/><rect x="126" y="161" width="40" height="6" rx="3" fill="#F5F5F7"/>
+    <circle cx="116" cy="198" r="4" fill="#3A3A3C"/><rect x="126" y="195" width="34" height="6" rx="3" fill="#86868B" opacity=".6"/>
+    <circle cx="116" cy="232" r="4" fill="#3A3A3C"/><rect x="126" y="229" width="40" height="6" rx="3" fill="#86868B" opacity=".6"/>
+    <circle cx="116" cy="266" r="4" fill="#3A3A3C"/><rect x="126" y="263" width="30" height="6" rx="3" fill="#86868B" opacity=".6"/>
+    <circle cx="116" cy="300" r="4" fill="#3A3A3C"/><rect x="126" y="297" width="36" height="6" rx="3" fill="#86868B" opacity=".6"/>
+    <text x="214" y="126" font-size="20" font-weight="600" fill="#F5F5F7">Visão geral</text>
+    <text x="214" y="146" font-size="12" fill="#86868B">Esta semana</text>
+    <rect x="206" y="160" width="152" height="84" rx="14" fill="#2C2C2E"/>
+    <text x="222" y="186" font-size="11" fill="#86868B">Pedidos</text><text x="222" y="212" font-size="22" font-weight="700" fill="#F5F5F7">128</text><text x="222" y="231" font-size="11" font-weight="600" fill="#007AFF">+12%</text>
+    <rect x="375" y="160" width="152" height="84" rx="14" fill="#2C2C2E"/>
+    <text x="391" y="186" font-size="11" fill="#86868B">Faturamento</text><text x="391" y="212" font-size="22" font-weight="700" fill="#F5F5F7">R$ 18,4 mil</text><text x="391" y="231" font-size="11" font-weight="600" fill="#007AFF">+8%</text>
+    <rect x="544" y="160" width="152" height="84" rx="14" fill="#2C2C2E"/>
+    <text x="560" y="186" font-size="11" fill="#86868B">Cobranças em dia</text><text x="560" y="212" font-size="22" font-weight="700" fill="#F5F5F7">96%</text><text x="560" y="231" font-size="11" font-weight="600" fill="#007AFF">+2%</text>
+    <rect x="206" y="258" width="300" height="166" rx="14" fill="#2C2C2E"/>
+    <text x="222" y="283" font-size="13" font-weight="600" fill="#F5F5F7">Vendas da semana</text>
+    <rect x="224" y="370" width="24" height="34" rx="6" fill="#3A3A3C"/><rect x="262" y="352" width="24" height="52" rx="6" fill="#3A3A3C"/><rect x="300" y="360" width="24" height="44" rx="6" fill="#3A3A3C"/><rect x="338" y="336" width="24" height="68" rx="6" fill="#3A3A3C"/><rect x="376" y="346" width="24" height="58" rx="6" fill="#3A3A3C"/><rect x="414" y="320" width="24" height="84" rx="6" fill="#3A3A3C"/><rect x="452" y="300" width="24" height="104" rx="6" fill="#0071E3"/>
+    <rect x="520" y="258" width="176" height="166" rx="14" fill="#2C2C2E"/>
+    <text x="536" y="283" font-size="13" font-weight="600" fill="#F5F5F7">Últimos pedidos</text>
+    <circle cx="546" cy="315" r="10" fill="#3A3A3C"/><rect x="564" y="306" width="56" height="7" rx="3.5" fill="#F5F5F7" opacity=".85"/><rect x="564" y="318" width="36" height="5" rx="2.5" fill="#86868B" opacity=".6"/><circle cx="676" cy="315" r="4" fill="#0071E3"/>
+    <circle cx="546" cy="355" r="10" fill="#3A3A3C"/><rect x="564" y="346" width="56" height="7" rx="3.5" fill="#F5F5F7" opacity=".85"/><rect x="564" y="358" width="36" height="5" rx="2.5" fill="#86868B" opacity=".6"/><circle cx="676" cy="355" r="4" fill="#0071E3"/>
+    <circle cx="546" cy="395" r="10" fill="#3A3A3C"/><rect x="564" y="386" width="56" height="7" rx="3.5" fill="#F5F5F7" opacity=".85"/><rect x="564" y="398" width="36" height="5" rx="2.5" fill="#86868B" opacity=".6"/><circle cx="676" cy="395" r="4" fill="#3A3A3C"/>
+  </g>
+
+  <g class="pc pc2">
+    <rect x="690" y="118" width="170" height="342" rx="30" fill="#000" stroke="#3A3A3C" stroke-width="2"/>
+    <rect x="700" y="128" width="150" height="322" rx="22" fill="#1D1D1F"/>
+    <rect x="745" y="136" width="60" height="10" rx="5" fill="#000"/>
+    <text x="716" y="180" font-size="17" font-weight="600" fill="#F5F5F7">Pedidos</text>
+    <text x="716" y="198" font-size="11" fill="#86868B">3 hoje</text>
+    <rect x="712" y="212" width="126" height="48" rx="12" fill="#2C2C2E"/><circle cx="732" cy="236" r="11" fill="#0071E3"/><path d="M727 236.5l3.5 3.5 6.5-7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="750" y="233" font-size="12" font-weight="600" fill="#F5F5F7">Pedido 1042</text><text x="750" y="248" font-size="10" fill="#86868B">Aprovado</text>
+    <rect x="712" y="268" width="126" height="48" rx="12" fill="#2C2C2E"/><circle cx="732" cy="292" r="11" fill="#0071E3"/><path d="M727 292.5l3.5 3.5 6.5-7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="750" y="289" font-size="12" font-weight="600" fill="#F5F5F7">Pedido 1041</text><text x="750" y="304" font-size="10" fill="#86868B">Aprovado</text>
+    <rect x="712" y="324" width="126" height="48" rx="12" fill="#2C2C2E"/><circle cx="732" cy="348" r="11" fill="#3A3A3C"/><text x="750" y="345" font-size="12" font-weight="600" fill="#F5F5F7">Pedido 1040</text><text x="750" y="360" font-size="10" fill="#86868B">Em análise</text>
+    <rect x="716" y="398" width="118" height="36" rx="18" fill="#0071E3"/>
+    <text x="775" y="421" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Novo pedido</text>
+  </g>
+
+  <g class="pc pc3">
+    <rect x="40" y="428" width="248" height="58" rx="16" fill="#fff"/>
+    <circle cx="72" cy="457" r="14" fill="#0071E3"/><path d="M65.5 457.5l4.5 4.5 8-9.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="98" y="453" font-size="14" font-weight="600" fill="#1D1D1F">Parcela paga</text>
+    <text x="98" y="471" font-size="12" fill="#6E6E73">R$ 189,00 · Pix</text>
+  </g>
+
+  <g class="pc pc4">
+    <rect x="764" y="64" width="188" height="60" rx="16" fill="#fff"/>
+    <path d="M792 80Q795 96 810 99Q795 102 792 118Q789 102 774 99Q789 96 792 80Z" fill="#0071E3"/>
+    <text x="822" y="92" font-size="13" font-weight="600" fill="#1D1D1F">Nota lida pela IA</text>
+    <text x="822" y="110" font-size="11" fill="#6E6E73">12 campos extraídos</text>
+  </g>
+</svg>
+      <nav class="chips" aria-label="Atalhos para os serviços">
+        <a href="#sites">Sites</a>
+        <a href="#apps">Apps e sistemas</a>
+        <a href="#migracao">Migração</a>
+        <a href="#ia">IA e automação</a>
+        <a href="#crediario">Crediário</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="section white" id="servicos">
+    <div class="wrap">
+      <h2>Nossos serviços</h2>
+      <p class="intro">A gente desenvolve, implanta e acompanha. Você fala direto com quem constrói.</p>
+
+      <div class="features">
+        <div class="feature" id="sites">
+          <div class="feature-text">
+            <h3>Sites</h3>
+            <p class="lead">Site institucional, página de vendas ou blog, pensado para levar quem chega a falar com você. Rápido, fácil de manter e com a cara da sua empresa.</p>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre um site para a minha empresa." href="#contato">Conversar sobre um site</a>
+          </div>
+          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Um site aberto no navegador e no celular">
+  <rect x="50" y="36" width="340" height="236" rx="16" class="l-card"/>
+  <circle cx="74" cy="60" r="5" fill="#D2D2D7"/><circle cx="92" cy="60" r="5" fill="#D2D2D7"/><circle cx="110" cy="60" r="5" fill="#D2D2D7"/>
+  <rect x="130" y="52" width="170" height="16" rx="8" fill="#F5F5F7"/>
+  <line x1="50" y1="80" x2="390" y2="80" stroke="#D2D2D7" stroke-width="1.5"/>
+  <rect x="76" y="106" width="150" height="14" rx="7" class="l-ink"/>
+  <rect x="76" y="128" width="110" height="14" rx="7" class="l-ink"/>
+  <rect x="76" y="156" width="160" height="7" rx="3.5" class="l-bar"/>
+  <rect x="76" y="170" width="130" height="7" rx="3.5" class="l-bar"/>
+  <rect x="76" y="194" width="104" height="32" rx="16" class="l-blue"/>
+  <rect x="94" y="206" width="68" height="7" rx="3.5" fill="#fff"/>
+  <rect x="256" y="100" width="80" height="126" rx="12" class="l-ink"/>
+  <circle cx="296" cy="134" r="14" class="l-blue"/>
+  <path d="M264 216 L288 180 L304 200 L316 186 L330 216 Z" fill="#3A3A3C"/>
+  <rect x="76" y="240" width="80" height="20" rx="6" fill="#F5F5F7"/><rect x="168" y="240" width="80" height="20" rx="6" fill="#F5F5F7"/><rect x="260" y="240" width="80" height="20" rx="6" fill="#F5F5F7"/>
+  <path d="M152 214 L152 240 L159 233 L164 245 L170 243 L165 231 L174 231 Z" fill="#1D1D1F" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="352" y="120" width="96" height="176" rx="18" fill="#fff" stroke="#1D1D1F" stroke-width="2.5"/>
+  <rect x="384" y="128" width="32" height="6" rx="3" class="l-ink"/>
+  <rect x="368" y="150" width="64" height="10" rx="5" class="l-ink"/>
+  <rect x="368" y="168" width="48" height="6" rx="3" class="l-bar"/>
+  <rect x="368" y="188" width="64" height="22" rx="11" class="l-blue"/>
+  <rect x="368" y="224" width="64" height="56" rx="8" class="l-ink"/>
+  <circle cx="386" cy="242" r="7" class="l-blue"/>
+  <path d="M374 276 L390 258 L400 268 L408 262 L426 276 Z" fill="#3A3A3C"/>
+</svg></div>
+        </div>
+
+        <div class="feature flip" id="apps">
+          <div class="feature-text">
+            <h3>Apps e sistemas</h3>
+            <p class="lead">Aplicativos e sistemas de gestão feitos para o jeito como a sua empresa opera: pedidos, estoque, equipes, painéis e integração entre as ferramentas que você já usa.</p>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre um app ou sistema sob medida." href="#contato">Conversar sobre um app ou sistema</a>
+          </div>
+          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Um aplicativo de pedidos no celular conectado a um painel com gráficos">
+  <path d="M176 160 C194 160 194 115 212 115" fill="none" stroke="#007AFF" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="176" cy="160" r="4.5" class="l-blue"/><circle cx="212" cy="115" r="4.5" class="l-blue"/>
+  <rect x="56" y="40" width="120" height="240" rx="22" fill="#fff" stroke="#1D1D1F" stroke-width="2.5"/>
+  <rect x="96" y="48" width="40" height="7" rx="3.5" class="l-ink"/>
+  <rect x="72" y="72" width="60" height="9" rx="4.5" class="l-ink"/>
+  <rect x="70" y="96" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="111" r="7" class="l-blue"/><path d="M80.5 111.5l2.5 2.5 4.5-5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="98" y="104" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="114" width="30" height="5" rx="2.5" class="l-bar"/>
+  <rect x="70" y="132" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="147" r="7" class="l-blue"/><path d="M80.5 147.5l2.5 2.5 4.5-5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="98" y="140" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="150" width="30" height="5" rx="2.5" class="l-bar"/>
+  <rect x="70" y="168" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="183" r="7" fill="#D2D2D7"/><rect x="98" y="176" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="186" width="30" height="5" rx="2.5" class="l-bar"/>
+  <rect x="70" y="204" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="219" r="7" fill="#D2D2D7"/><rect x="98" y="212" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="222" width="30" height="5" rx="2.5" class="l-bar"/>
+  <rect x="70" y="246" width="92" height="22" rx="11" fill="#F5F5F7"/>
+  <rect x="212" y="40" width="220" height="150" rx="16" class="l-card"/>
+  <rect x="230" y="58" width="70" height="9" rx="4.5" class="l-ink"/>
+  <rect x="376" y="56" width="40" height="20" rx="10" fill="#F5F5F7"/><circle cx="388" cy="66" r="4" class="l-blue"/>
+  <rect x="230" y="172" width="186" height="1.5" fill="#D2D2D7"/>
+  <rect x="232" y="136" width="22" height="34" rx="5" fill="#D2D2D7"/><rect x="262" y="118" width="22" height="52" rx="5" fill="#D2D2D7"/><rect x="292" y="126" width="22" height="44" rx="5" fill="#D2D2D7"/><rect x="322" y="96" width="22" height="74" rx="5" fill="#D2D2D7"/><rect x="352" y="74" width="22" height="96" rx="5" class="l-blue"/>
+  <rect x="212" y="206" width="104" height="74" rx="14" class="l-card"/>
+  <rect x="228" y="222" width="44" height="7" rx="3.5" class="l-bar"/><rect x="228" y="238" width="62" height="14" rx="7" class="l-ink"/><rect x="228" y="262" width="36" height="6" rx="3" class="l-blue"/>
+  <rect x="328" y="206" width="104" height="74" rx="14" class="l-card"/>
+  <rect x="344" y="222" width="44" height="7" rx="3.5" class="l-bar"/><rect x="344" y="238" width="48" height="14" rx="7" class="l-ink"/><rect x="344" y="262" width="36" height="6" rx="3" class="l-bar"/>
+</svg></div>
+        </div>
+
+        <div class="feature" id="migracao">
+          <div class="feature-text">
+            <h3>Migração de sistemas</h3>
+            <p class="lead">Seu sistema ficou pequeno, caro ou preso a uma plataforma? A gente leva do Bubble e de outras plataformas no-code, ou de sistemas antigos, para código próprio, por partes e sem parar a operação.</p>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre a migração de um sistema." href="#contato">Conversar sobre migração</a>
+          </div>
+          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Migração por partes de uma plataforma atual para código próprio, sem parar a operação">
+  <rect x="36" y="56" width="150" height="150" rx="16" fill="#fff" stroke="#86868B" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <rect x="52" y="76" width="118" height="22" rx="6" fill="#D2D2D7"/><rect x="52" y="106" width="118" height="22" rx="6" fill="#D2D2D7"/><rect x="52" y="136" width="118" height="22" rx="6" fill="#D2D2D7"/><rect x="52" y="166" width="118" height="22" rx="6" fill="#D2D2D7"/>
+  <rect x="294" y="56" width="150" height="150" rx="16" fill="#1D1D1F"/>
+  <rect x="310" y="76" width="118" height="22" rx="6" fill="#007AFF"/><rect x="310" y="106" width="118" height="22" rx="6" fill="#007AFF"/><rect x="310" y="136" width="118" height="22" rx="6" fill="#3A3A3C"/><rect x="310" y="166" width="118" height="22" rx="6" fill="#3A3A3C"/>
+  <g class="pill" style="--o:1"><rect x="206" y="82" width="68" height="22" rx="11" class="l-blue"/><rect x="220" y="90" width="40" height="6" rx="3" fill="#fff"/></g>
+  <g class="pill" style="--o:.7"><rect x="206" y="118" width="68" height="22" rx="11" class="l-blue"/><rect x="220" y="126" width="40" height="6" rx="3" fill="#fff"/></g>
+  <g class="pill" style="--o:.4"><rect x="206" y="154" width="68" height="22" rx="11" class="l-blue"/><rect x="220" y="162" width="40" height="6" rx="3" fill="#fff"/></g>
+  <text x="111" y="232" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Hoje</text>
+  <text x="369" y="232" text-anchor="middle" font-size="19" font-weight="600" fill="#1D1D1F">Código próprio</text>
+  <rect x="36" y="262" width="408" height="8" rx="4" fill="#D2D2D7"/>
+  <rect class="prog l-blue" x="36" y="262" width="272" height="8" rx="4"/>
+  <circle cx="40" cy="266" r="8" fill="#007AFF" stroke="#F5F5F7" stroke-width="3"/><circle cx="240" cy="266" r="8" fill="#007AFF" stroke="#F5F5F7" stroke-width="3"/><circle cx="440" cy="266" r="8" fill="#D2D2D7" stroke="#F5F5F7" stroke-width="3"/>
+  <text x="36" y="300" font-size="19" font-weight="500" fill="#86868B">Mapear</text>
+  <text x="240" y="300" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Migrar</text>
+  <text x="444" y="300" text-anchor="end" font-size="19" font-weight="500" fill="#86868B">Desligar</text>
+</svg></div>
+        </div>
+
+        <div class="feature flip" id="ia">
+          <div class="feature-text">
+            <h3>IA e automação</h3>
+            <p class="lead">Comece pequeno: encontramos juntos onde a IA economiza tempo ou dinheiro na sua operação, como leitura de documentos, atendimento e relatórios, e colocamos a primeira automação para funcionar.</p>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre IA e automação na minha empresa." href="#contato">Conversar sobre IA</a>
+          </div>
+          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Um documento passa pela IA e vira dados organizados">
+  <rect x="40" y="70" width="110" height="150" rx="12" class="l-card"/>
+  <rect x="56" y="88" width="50" height="8" rx="4" class="l-ink"/>
+  <rect x="56" y="108" width="78" height="6" rx="3" class="l-bar"/><rect x="56" y="122" width="62" height="6" rx="3" class="l-bar"/><rect x="56" y="136" width="78" height="6" rx="3" class="l-bar"/>
+  <rect x="56" y="166" width="78" height="1.5" fill="#D2D2D7"/>
+  <rect x="56" y="182" width="40" height="7" rx="3.5" class="l-bar"/><rect x="100" y="180" width="34" height="11" rx="5.5" class="l-ink"/>
+  <path d="M160 145 H196 M189 138 L197 145 L189 152" fill="none" stroke="#86868B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="204" y="107" width="72" height="72" rx="20" fill="#1D1D1F"/>
+  <path class="spark" d="M240 123 Q243 140 260 143 Q243 146 240 163 Q237 146 220 143 Q237 140 240 123Z" fill="#007AFF"/>
+  <path d="M262 114 Q263 120 269 121 Q263 122 262 128 Q261 122 255 121 Q261 120 262 114Z" fill="#fff"/>
+  <path d="M284 145 H320 M313 138 L321 145 L313 152" fill="none" stroke="#86868B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="330" y="70" width="110" height="150" rx="12" class="l-card"/>
+  <rect x="330" y="70" width="110" height="28" rx="12" fill="#F5F5F7"/><rect x="330" y="86" width="110" height="12" fill="#F5F5F7"/>
+  <rect x="342" y="80" width="30" height="7" rx="3.5" class="l-bar"/>
+  <rect x="342" y="112" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="112" width="36" height="6" rx="3" class="l-blue"/>
+  <line x1="342" y1="128" x2="428" y2="128" stroke="#F5F5F7" stroke-width="2"/>
+  <rect x="342" y="140" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="140" width="36" height="6" rx="3" class="l-ink"/>
+  <line x1="342" y1="156" x2="428" y2="156" stroke="#F5F5F7" stroke-width="2"/>
+  <rect x="342" y="168" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="168" width="36" height="6" rx="3" class="l-ink"/>
+  <line x1="342" y1="184" x2="428" y2="184" stroke="#F5F5F7" stroke-width="2"/>
+  <rect x="342" y="196" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="196" width="36" height="6" rx="3" class="l-ink"/>
+  <text x="95" y="252" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Documento</text>
+  <text x="240" y="208" text-anchor="middle" font-size="19" font-weight="600" fill="#1D1D1F">IA</text>
+  <text x="385" y="252" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Dados</text>
+</svg></div>
+        </div>
+
+        <div class="feature" id="crediario">
+          <div class="feature-text">
+            <h3>Crediário e cobrança</h3>
+            <p class="lead">Para quem vende parcelado: implementação de crediário próprio e automação de cobranças, com Pix e boleto no nome da sua empresa e lembretes pelo WhatsApp.</p>
+            <a class="link" href="/crediario">Ver a página de crediário</a>
+          </div>
+          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Carnê com seis de dez parcelas pagas e um lembrete de vencimento no WhatsApp"><rect x="60" y="44" width="360" height="206" rx="18" class="l-card"/><rect x="84" y="66" width="96" height="10" rx="5" class="l-ink"/><rect x="84" y="84" width="64" height="7" rx="3.5" class="l-bar"/><rect x="330" y="62" width="66" height="24" rx="12" fill="#F5F5F7"/><circle cx="346" cy="74" r="5" class="l-blue"/><rect x="356" y="71" width="30" height="6" rx="3" class="l-bar"/><rect x="84" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M101 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="148" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M165 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="212" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M229 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="276" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M293 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="340" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M357 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="84" y="172" width="56" height="52" rx="10" class="l-blue"/><path d="M101 199 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="148" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="162" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><rect x="212" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="226" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><rect x="276" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="290" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><rect x="340" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="354" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><g><rect x="286" y="212" width="152" height="58" rx="16" fill="#1D1D1F"/><path d="M306 270 L298 286 L324 270 Z" fill="#1D1D1F"/><rect x="302" y="228" width="104" height="7" rx="3.5" fill="#fff"/><rect x="302" y="244" width="66" height="7" rx="3.5" fill="#86868B"/><circle cx="420" cy="228" r="5" class="l-blue"/></g></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RASCUNHO: princípios tirados da tese da Baran. Reescrever na sua voz (tarefa do manifesto). -->
+  <section class="section dark" id="como-pensamos">
+    <div class="wrap">
+      <h2>Como a gente pensa a Baran.</h2>
+      <p class="intro">Antes de escolher uma software house, vale saber como ela pensa. A gente acredita em tecnologia para melhorar a vida das pessoas, e trabalha assim.</p>
+      <div class="pillars">
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></div>
+          <h3>Entender o problema antes de escrever código.</h3>
+          <p>Tecnologia sozinha não resolve nada. Primeiro a gente entende a sua operação. Depois decide o que construir.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M4 19h4v-4h4v-4h4V7h4"/></svg></div>
+          <h3>Começar pequeno e validar.</h3>
+          <p>Preferimos uma primeira versão pequena, no ar e em uso, a um projeto grande que demora para provar valor.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/><path d="M19 17v4M17 19h4"/></svg></div>
+          <h3>IA para decidir melhor, não só para automatizar.</h3>
+          <p>Usamos IA onde ela ajuda a empresa a entender seus dados, enxergar oportunidades e tomar decisões melhores.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div>
+          <h3>Tratar bem cada pessoa.</h3>
+          <p>Clientes e equipe merecem clareza, prazo cumprido e conversa direta, sem intermediários.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <Cases intro="Projetos de crédito, cobrança e gestão que o João já construiu e liderou." mariah />
+
+  <section class="section white" id="como-funciona">
+    <div class="wrap">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><h3>Conversa</h3><p>Uma conversa, sem custo, para entender como a sua empresa funciona e o que precisa mudar.</p></li>
+        <li><h3>Proposta</h3><p>Uma proposta de uma página, com escopo, prazo e preço fechado.</p></li>
+        <li><h3>Construção</h3><p>Entregas curtas, com você acompanhando cada etapa.</p></li>
+        <li><h3>Acompanhamento</h3><p>Ajustes e suporte depois que o projeto entra no ar.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <QuemSomos />
+
+  <section class="section light faq" id="duvidas">
+    <div class="wrap">
+      <h2>Dúvidas comuns</h2>
+      <div class="pillars">
+        <article class="pillar"><h3>Quanto custa?</h3><p>Depende do escopo. Depois da primeira conversa, você recebe uma proposta de uma página com escopo, prazo e preço fechado.</p></article>
+        <article class="pillar"><h3>Vocês atendem fora da minha cidade?</h3><p>Sim. Atendemos on-line em qualquer lugar e presencialmente em Santa Catarina.</p></article>
+        <article class="pillar"><h3>Preciso trocar meu sistema?</h3><p>Não necessariamente. Trabalhamos a partir do que você usa hoje, seja sistema ou planilha, e só trocamos o que vale a pena trocar.</p></article>
+        <article class="pillar"><h3>Não sei por onde começar. E agora?</h3><p>Comece pela conversa. Nela, a gente aponta o menor projeto que já traz resultado para a sua empresa.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <Contato />
+</Base>

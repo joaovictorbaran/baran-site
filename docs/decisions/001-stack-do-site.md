@@ -28,10 +28,18 @@ O site da Baran Tecnologia é institucional e de captação: apresenta serviços
 
 ## Consequências
 
-- O HTML atual fica com duplicação temporária. Aceitável por poucos dias.
+- O HTML atual ficou com duplicação temporária, resolvida pela migração (ver Resultado).
 - Hospedagem continua na Vercel.
 - Aprender uma ferramenta nova, com ecossistema menor que o do Next.js.
 
 ## Gatilho de revisão
 
 Revisar esta decisão se o site ganhar área logada, formulários com API própria ou código compartilhado com a plataforma Baran.
+
+## Resultado da migração (02/10/2026, BAR-55)
+
+- **Feito:** o site foi migrado para Astro (saída estática) com pnpm, sem mudar conteúdo nem visual. Layout, navegação, rodapé, script e CSS compartilhados; componentes `Cases`, `QuemSomos` e `Contato`. URLs preservadas: `/` e `/crediario` (`build.format: 'file'` mais o `cleanUrls` do `vercel.json`).
+- **Paridade:** comparação elemento a elemento (posição, tamanho, cor, fonte) entre a versão HTML e a Astro em 1440×900 e 390×844: crediário sem nenhuma diferença; home com uma diferença sem efeito visual (um nó de texto em branco).
+- **Lighthouse (celular, servidor local, uma rodada):** home 87 → 93 e crediário 88 → 95 em desempenho; acessibilidade, boas práticas e SEO seguem em 100. FCP de 3,1 s para 1,9 s (home) e 1,7 s (crediário). Peso transferido de 135 para 102 KB (home) e de 128 para 91 KB (crediário).
+- **Foto:** saiu do HTML (antes duplicada em data URI nas duas páginas) e virou um arquivo único em `/_astro/`, com cache. Não foi recodificada, porque a otimização de imagens do Astro exige a dependência `sharp`, fora do combinado (só `astro`). Se quisermos WebP, abrir issue para adicionar o `sharp`.
+- **Vercel:** Framework Preset Astro, comando `pnpm build`, saída `dist`.

@@ -1,0 +1,39 @@
+---
+interface Props { intro: string; mariah?: boolean }
+const { intro, mariah = false } = Astro.props;
+const mariahHtml = '        <article class="case">\n          <div>\n            <span class="kind">Sistema sob medida</span>\n            <h3>Mariah Sá</h3>\n            <p>Marca de acessórios femininos com uma rede de revendedoras. Antes, os pedidos eram tirados em planilhas. Hoje, tudo acontece no sistema que a Baran desenvolveu.</p>\n            <div class="tags"><span>Gestão</span><span>Estoque</span><span>Pedidos</span></div>\n          </div>\n          <div class="visual"><svg viewBox="0 0 480 220" role="img" aria-label="Planilhas de pedidos dando lugar a um sistema de gestão">\n  <rect x="28" y="36" width="170" height="148" rx="12" class="l-card"/>\n  <rect x="28" y="36" width="170" height="24" rx="12" fill="#D2D2D7"/><rect x="28" y="48" width="170" height="12" fill="#D2D2D7"/>\n  <g stroke="#D2D2D7" stroke-width="1.5"><line x1="62" y1="36" x2="62" y2="184"/><line x1="96" y1="36" x2="96" y2="184"/><line x1="130" y1="36" x2="130" y2="184"/><line x1="164" y1="36" x2="164" y2="184"/><line x1="28" y1="84" x2="198" y2="84"/><line x1="28" y1="108" x2="198" y2="108"/><line x1="28" y1="132" x2="198" y2="132"/><line x1="28" y1="156" x2="198" y2="156"/></g>\n  <g fill="#86868B" opacity=".6"><rect x="36" y="68" width="18" height="5" rx="2.5"/><rect x="70" y="68" width="18" height="5" rx="2.5"/><rect x="104" y="68" width="18" height="5" rx="2.5"/><rect x="138" y="68" width="18" height="5" rx="2.5"/><rect x="36" y="92" width="18" height="5" rx="2.5"/><rect x="104" y="92" width="18" height="5" rx="2.5"/><rect x="70" y="116" width="18" height="5" rx="2.5"/><rect x="138" y="116" width="18" height="5" rx="2.5"/><rect x="36" y="140" width="18" height="5" rx="2.5"/><rect x="104" y="140" width="18" height="5" rx="2.5"/><rect x="170" y="140" width="18" height="5" rx="2.5"/><rect x="70" y="164" width="18" height="5" rx="2.5"/></g>\n  <path d="M210 110 H256 M249 103 L257 110 L249 117" fill="none" stroke="#007AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>\n  <rect x="274" y="36" width="182" height="148" rx="14" class="l-card"/>\n  <rect x="274" y="36" width="44" height="148" rx="14" fill="#1D1D1F"/><rect x="304" y="36" width="14" height="148" fill="#1D1D1F"/>\n  <rect x="288" y="56" width="16" height="16" rx="4" class="l-blue"/><rect x="288" y="84" width="16" height="16" rx="4" fill="#3A3A3C"/><rect x="288" y="112" width="16" height="16" rx="4" fill="#3A3A3C"/>\n  <rect x="332" y="50" width="110" height="26" rx="8" fill="#F5F5F7"/><circle cx="346" cy="63" r="5" class="l-blue"/><rect x="358" y="60" width="50" height="6" rx="3" class="l-ink"/>\n  <rect x="332" y="82" width="110" height="26" rx="8" fill="#F5F5F7"/><circle cx="346" cy="95" r="5" class="l-blue"/><rect x="358" y="92" width="40" height="6" rx="3" class="l-ink"/>\n  <rect x="332" y="114" width="110" height="26" rx="8" fill="#F5F5F7"/><circle cx="346" cy="127" r="5" fill="#D2D2D7"/><rect x="358" y="124" width="46" height="6" rx="3" class="l-ink"/>\n  <rect x="334" y="164" width="14" height="12" rx="3" fill="#D2D2D7"/><rect x="356" y="156" width="14" height="20" rx="3" fill="#D2D2D7"/><rect x="378" y="148" width="14" height="28" rx="3" class="l-blue"/><rect x="400" y="160" width="14" height="16" rx="3" fill="#D2D2D7"/><rect x="422" y="154" width="14" height="22" rx="3" fill="#D2D2D7"/>\n</svg></div>\n          <ul class="ticks"><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Gestão de revendedoras.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Controle de estoque.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Pedidos das revendedoras no sistema, no lugar das planilhas.</li></ul>\n        </article>\n';
+---
+  <section class="section light" id="cases">
+    <div class="wrap">
+      <h2>Cases</h2>
+      <p class="intro">{intro}</p>
+      <div class="cases">
+        <article class="case">
+          <div>
+            <span class="kind">Trajetória do fundador</span>
+            <h3>Parcela Mais</h3>
+            <p>Fintech de Florianópolis que financia procedimentos de saúde. Como Tech Lead e depois CTO, João liderou o time que construiu a tecnologia da operação de crédito.</p>
+            <div class="tags"><span>Crédito</span><span>Cobrança</span><span>API</span><span>IA</span></div>
+          </div>
+          <div class="visual"><svg viewBox="0 0 480 220" role="img" aria-label="Um pedido passa pelo motor de análise de crédito e termina aprovado ou recusado">
+  <rect x="24" y="80" width="84" height="60" rx="14" class="l-card"/>
+  <rect x="38" y="96" width="40" height="7" rx="3.5" class="l-ink"/><rect x="38" y="110" width="56" height="6" rx="3" class="l-bar"/><rect x="38" y="122" width="30" height="6" rx="3" class="l-bar"/>
+  <path d="M114 110 H142 M135 103 L143 110 L135 117" fill="none" stroke="#86868B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="150" y="36" width="140" height="148" rx="18" fill="#1D1D1F"/>
+  <rect x="166" y="54" width="108" height="26" rx="13" fill="#3A3A3C"/><circle cx="182" cy="67" r="5" class="l-blue"/><rect x="194" y="64" width="60" height="6" rx="3" fill="#fff" opacity=".85"/>
+  <rect x="166" y="90" width="108" height="26" rx="13" fill="#3A3A3C"/><circle cx="182" cy="103" r="5" class="l-blue"/><rect x="194" y="100" width="48" height="6" rx="3" fill="#fff" opacity=".85"/>
+  <rect x="166" y="126" width="108" height="26" rx="13" fill="#3A3A3C"/><circle cx="182" cy="139" r="5" class="l-blue"/><rect x="194" y="136" width="54" height="6" rx="3" fill="#fff" opacity=".85"/>
+  <path d="M290 110 C314 110 314 66 338 66 M290 110 C314 110 314 154 338 154" fill="none" stroke="#86868B" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="338" y="44" width="122" height="44" rx="14" class="l-blue"/>
+  <path d="M358 66 l7 7 12-14" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="388" y="62" width="56" height="8" rx="4" fill="#fff"/>
+  <rect x="338" y="132" width="122" height="44" rx="14" class="l-card"/>
+  <path d="M360 148 l14 14 M374 148 l-14 14" stroke="#86868B" stroke-width="3" stroke-linecap="round"/><rect x="388" y="150" width="56" height="8" rx="4" class="l-bar"/>
+</svg></div>
+          <ul class="ticks"><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Motor de análise de crédito.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Plataforma de cobrança.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>API pública para parceiros.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Análise de documentos com IA.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Confirmação de agendamentos.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Criação de subcontas de pagamento.</li></ul>
+        </article>
+        {mariah && (
+          <Fragment set:html={mariahHtml} />
+        )}
+      </div>
+    </div>
+  </section>
