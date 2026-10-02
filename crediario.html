@@ -3,19 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Baran Tecnologia | Software house butique: sites, apps, sistemas e IA</title>
-<meta name="description" content="Baran Tecnologia: sites, apps, sistemas, migrações e IA, construídos de ponta a ponta por um CTO de fintech.">
-<meta property="og:title" content="Baran Tecnologia">
-<meta property="og:description" content="Software sob medida para o seu negócio: sites, apps, sistemas, migração, IA e automação.">
+<title>Crediário | Baran Tecnologia</title>
+<meta name="description" content="Crediário próprio, automação de cobranças e integração com os sistemas da sua empresa, para quem vende parcelado ou por mensalidade.">
+<meta property="og:title" content="Crediário | Baran Tecnologia">
+<meta property="og:description" content="Crediário próprio, automação de cobranças e integração com os sistemas da sua empresa.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://barantecnologia.com.br/">
-<meta property="og:image" content="https://barantecnologia.com.br/og-home.png">
+<meta property="og:url" content="https://barantecnologia.com.br/crediario.html">
+<meta property="og:image" content="https://barantecnologia.com.br/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Baran Tecnologia: software sob medida para o seu negócio.">
+<meta property="og:image:alt" content="Baran Tecnologia: a tecnologia por trás das suas vendas a prazo.">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://barantecnologia.com.br/">
+<link rel="canonical" href="https://barantecnologia.com.br/crediario.html">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Ctext x='32' y='45' font-family='Inter,Arial,sans-serif' font-size='38' font-weight='700' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -239,16 +239,66 @@
     .nav .btn-small { padding: 8px 14px; }
     .wordmark span { display: none; }
   }
+
+  /* Crediário: parcelas, faixa de segmentos, nota e garantias */
+  /* Parcelas sendo pagas (ilustração animada do hero) */
+  .parcelas { margin: 80px auto 0; max-width: 820px; display: grid; grid-template-columns: repeat(10, 1fr); gap: 12px; }
+  .parcela { aspect-ratio: 4 / 5; border-radius: 16px; background: var(--space); border: 1px solid rgba(255,255,255,.08); display: flex; flex-direction: column; justify-content: space-between; padding: 12px; }
+  .parcela small { font-size: .75rem; color: rgba(210,210,215,.6); text-align: left; }
+  .parcela .i { width: 24px; height: 24px; stroke-width: 2.4; color: var(--white); opacity: 0; align-self: flex-end; }
+  .parcela.paga { background: var(--blue); border-color: var(--blue); }
+  .parcela.paga small { color: rgba(255,255,255,.85); }
+  .parcela.paga .i { opacity: 1; }
+
+  /* Faixa de segmentos */
+  .segmentos { border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); padding: 22px 0; overflow: hidden; }
+  .segmentos .trilho { display: flex; gap: 12px; width: max-content; }
+  .segmentos span { padding: 8px 16px; border: 1px solid rgba(210,210,215,.25); border-radius: 980px; color: var(--gray); font-size: .9375rem; white-space: nowrap; }
+
+  .nota { margin: 88px 0 0; padding: 28px 32px; border-radius: 24px; background: var(--light); font-size: 1.125rem; line-height: 1.5; color: rgba(29,29,31,.72); }
+  .nota b { color: var(--space); }
+  .feature .num { font-size: .9375rem; font-weight: 600; color: var(--blue-hover); }
+  .visual img { width: 100%; height: auto; }
+  .pillars.tres { grid-template-columns: repeat(3, 1fr); gap: 48px; }
+  .faq .pillars.tres { row-gap: 56px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .parcelas { animation: rise 1s .35s cubic-bezier(.2,.7,.2,1) both; }
+    .parcela { animation: paga 9s ease infinite both; }
+    .parcela .i { animation: marca 9s ease infinite both; }
+    .parcela small { animation: rotulo 9s ease infinite both; }
+    .parcela:nth-child(2), .parcela:nth-child(2) .i, .parcela:nth-child(2) small { animation-delay: .45s; }
+    .parcela:nth-child(3), .parcela:nth-child(3) .i, .parcela:nth-child(3) small { animation-delay: .9s; }
+    .parcela:nth-child(4), .parcela:nth-child(4) .i, .parcela:nth-child(4) small { animation-delay: 1.35s; }
+    .parcela:nth-child(5), .parcela:nth-child(5) .i, .parcela:nth-child(5) small { animation-delay: 1.8s; }
+    .parcela:nth-child(6), .parcela:nth-child(6) .i, .parcela:nth-child(6) small { animation-delay: 2.25s; }
+    .parcela:nth-child(7), .parcela:nth-child(7) .i, .parcela:nth-child(7) small { animation-delay: 2.7s; }
+    .parcela:nth-child(8), .parcela:nth-child(8) .i, .parcela:nth-child(8) small { animation-delay: 3.15s; }
+    .parcela:nth-child(9), .parcela:nth-child(9) .i, .parcela:nth-child(9) small { animation-delay: 3.6s; }
+    .parcela:nth-child(10), .parcela:nth-child(10) .i, .parcela:nth-child(10) small { animation-delay: 4.05s; }
+    .segmentos .trilho { animation: desliza 40s linear infinite; }
+    .segmentos:hover .trilho { animation-play-state: paused; }
+    @keyframes paga { 0%, 8% { background: var(--space); border-color: rgba(255,255,255,.08); } 14%, 70% { background: var(--blue); border-color: var(--blue); } 80%, 100% { background: var(--space); border-color: rgba(255,255,255,.08); } }
+    @keyframes marca { 0%, 10% { opacity: 0; transform: scale(.6); } 16%, 70% { opacity: 1; transform: none; } 78%, 100% { opacity: 0; } }
+    @keyframes rotulo { 0%, 8% { color: rgba(210,210,215,.6); } 14%, 70% { color: rgba(255,255,255,.85); } 80%, 100% { color: rgba(210,210,215,.6); } }
+    @keyframes desliza { to { transform: translateX(-50%); } }
+  }
+  @media (prefers-reduced-motion: reduce) { .segmentos .trilho { padding-left: 24px; } }
+  @media (max-width: 900px) { .pillars.tres { grid-template-columns: 1fr; gap: 40px; } .faq .pillars.tres { row-gap: 40px; } }
+  @media (max-width: 560px) {
+    .parcelas { grid-template-columns: repeat(5, 1fr); gap: 8px; margin-top: 56px; }
+    .parcela { border-radius: 12px; padding: 8px; }
+    .nota { padding: 24px; margin-top: 64px; }
+  }
 </style>
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
-    <a class="wordmark" href="#topo" aria-label="Baran Tecnologia, início"><b>Baran</b><span>Tecnologia</span></a>
+    <a class="wordmark" href="/" aria-label="Baran Tecnologia, página inicial"><b>Baran</b><span>Tecnologia</span></a>
     <nav class="nav-links" aria-label="Seções">
-      <a href="#servicos">Serviços</a>
-      <a href="#como-pensamos">Como pensamos</a>
+      <a href="/">Todos os serviços</a>
+      <a href="#servicos">Crediário</a>
       <a href="#cases">Cases</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#duvidas">Dúvidas</a>
@@ -258,258 +308,98 @@
 </header>
 
 <main id="topo">
-  <section class="hero hero-split">
-    <div class="wrap hero-grid">
-      <div class="hero-text">
-        <h1>Software sob medida para o seu negócio.</h1>
-        <p>Sites, apps, sistemas, migrações e IA, construídos de ponta a ponta por um CTO de fintech.</p>
-        <div class="actions">
-          <a class="btn btn-primary" data-wa href="#contato">Conversar no WhatsApp</a>
-          <a class="link" href="#servicos">Ver os serviços</a>
-        </div>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Crediário para quem vende a prazo.</h1>
+      <p>Crediário próprio, automação de cobranças e integração com os sistemas da sua empresa, para quem vende parcelado ou por mensalidade.</p>
+      <div class="actions">
+        <a class="btn btn-primary" data-wa href="#contato">Conversar no WhatsApp</a>
+        <a class="link" href="#servicos">Ver os serviços</a>
       </div>
-      <svg class="hero-art" viewBox="30 30 930 470" role="img" aria-label="Ilustração de um sistema de gestão no computador e no celular, com avisos de parcela paga e de nota fiscal lida pela IA">
-  <g class="pc pc1">
-    <rect x="90" y="40" width="620" height="400" rx="20" fill="#1D1D1F" stroke="#fff" stroke-opacity=".1" stroke-width="1.5"/>
-    <path d="M90 89H190V440H110a20 20 0 0 1-20-20Z" fill="#161618"/>
-    <circle cx="116" cy="66" r="5" fill="#3A3A3C"/><circle cx="134" cy="66" r="5" fill="#3A3A3C"/><circle cx="152" cy="66" r="5" fill="#3A3A3C"/>
-    <rect x="190" y="54" width="230" height="24" rx="12" fill="#2C2C2E"/>
-    <text x="205" y="70" font-size="12" fill="#86868B">app.suaempresa.com.br</text>
-    <rect x="90" y="88" width="620" height="1" fill="#fff" opacity=".08"/>
-    <rect x="108" y="106" width="22" height="22" rx="7" fill="#0071E3"/>
-    <rect x="138" y="112" width="36" height="10" rx="5" fill="#F5F5F7"/>
-    <rect x="102" y="150" width="76" height="28" rx="8" fill="#2C2C2E"/><circle cx="116" cy="164" r="4" fill="#0071E3"/><rect x="126" y="161" width="40" height="6" rx="3" fill="#F5F5F7"/>
-    <circle cx="116" cy="198" r="4" fill="#3A3A3C"/><rect x="126" y="195" width="34" height="6" rx="3" fill="#86868B" opacity=".6"/>
-    <circle cx="116" cy="232" r="4" fill="#3A3A3C"/><rect x="126" y="229" width="40" height="6" rx="3" fill="#86868B" opacity=".6"/>
-    <circle cx="116" cy="266" r="4" fill="#3A3A3C"/><rect x="126" y="263" width="30" height="6" rx="3" fill="#86868B" opacity=".6"/>
-    <circle cx="116" cy="300" r="4" fill="#3A3A3C"/><rect x="126" y="297" width="36" height="6" rx="3" fill="#86868B" opacity=".6"/>
-    <text x="214" y="126" font-size="20" font-weight="600" fill="#F5F5F7">Visão geral</text>
-    <text x="214" y="146" font-size="12" fill="#86868B">Esta semana</text>
-    <rect x="206" y="160" width="152" height="84" rx="14" fill="#2C2C2E"/>
-    <text x="222" y="186" font-size="11" fill="#86868B">Pedidos</text><text x="222" y="212" font-size="22" font-weight="700" fill="#F5F5F7">128</text><text x="222" y="231" font-size="11" font-weight="600" fill="#007AFF">+12%</text>
-    <rect x="375" y="160" width="152" height="84" rx="14" fill="#2C2C2E"/>
-    <text x="391" y="186" font-size="11" fill="#86868B">Faturamento</text><text x="391" y="212" font-size="22" font-weight="700" fill="#F5F5F7">R$ 18,4 mil</text><text x="391" y="231" font-size="11" font-weight="600" fill="#007AFF">+8%</text>
-    <rect x="544" y="160" width="152" height="84" rx="14" fill="#2C2C2E"/>
-    <text x="560" y="186" font-size="11" fill="#86868B">Cobranças em dia</text><text x="560" y="212" font-size="22" font-weight="700" fill="#F5F5F7">96%</text><text x="560" y="231" font-size="11" font-weight="600" fill="#007AFF">+2%</text>
-    <rect x="206" y="258" width="300" height="166" rx="14" fill="#2C2C2E"/>
-    <text x="222" y="283" font-size="13" font-weight="600" fill="#F5F5F7">Vendas da semana</text>
-    <rect x="224" y="370" width="24" height="34" rx="6" fill="#3A3A3C"/><rect x="262" y="352" width="24" height="52" rx="6" fill="#3A3A3C"/><rect x="300" y="360" width="24" height="44" rx="6" fill="#3A3A3C"/><rect x="338" y="336" width="24" height="68" rx="6" fill="#3A3A3C"/><rect x="376" y="346" width="24" height="58" rx="6" fill="#3A3A3C"/><rect x="414" y="320" width="24" height="84" rx="6" fill="#3A3A3C"/><rect x="452" y="300" width="24" height="104" rx="6" fill="#0071E3"/>
-    <rect x="520" y="258" width="176" height="166" rx="14" fill="#2C2C2E"/>
-    <text x="536" y="283" font-size="13" font-weight="600" fill="#F5F5F7">Últimos pedidos</text>
-    <circle cx="546" cy="315" r="10" fill="#3A3A3C"/><rect x="564" y="306" width="56" height="7" rx="3.5" fill="#F5F5F7" opacity=".85"/><rect x="564" y="318" width="36" height="5" rx="2.5" fill="#86868B" opacity=".6"/><circle cx="676" cy="315" r="4" fill="#0071E3"/>
-    <circle cx="546" cy="355" r="10" fill="#3A3A3C"/><rect x="564" y="346" width="56" height="7" rx="3.5" fill="#F5F5F7" opacity=".85"/><rect x="564" y="358" width="36" height="5" rx="2.5" fill="#86868B" opacity=".6"/><circle cx="676" cy="355" r="4" fill="#0071E3"/>
-    <circle cx="546" cy="395" r="10" fill="#3A3A3C"/><rect x="564" y="386" width="56" height="7" rx="3.5" fill="#F5F5F7" opacity=".85"/><rect x="564" y="398" width="36" height="5" rx="2.5" fill="#86868B" opacity=".6"/><circle cx="676" cy="395" r="4" fill="#3A3A3C"/>
-  </g>
-
-  <g class="pc pc2">
-    <rect x="690" y="118" width="170" height="342" rx="30" fill="#000" stroke="#3A3A3C" stroke-width="2"/>
-    <rect x="700" y="128" width="150" height="322" rx="22" fill="#1D1D1F"/>
-    <rect x="745" y="136" width="60" height="10" rx="5" fill="#000"/>
-    <text x="716" y="180" font-size="17" font-weight="600" fill="#F5F5F7">Pedidos</text>
-    <text x="716" y="198" font-size="11" fill="#86868B">3 hoje</text>
-    <rect x="712" y="212" width="126" height="48" rx="12" fill="#2C2C2E"/><circle cx="732" cy="236" r="11" fill="#0071E3"/><path d="M727 236.5l3.5 3.5 6.5-7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="750" y="233" font-size="12" font-weight="600" fill="#F5F5F7">Pedido 1042</text><text x="750" y="248" font-size="10" fill="#86868B">Aprovado</text>
-    <rect x="712" y="268" width="126" height="48" rx="12" fill="#2C2C2E"/><circle cx="732" cy="292" r="11" fill="#0071E3"/><path d="M727 292.5l3.5 3.5 6.5-7.5" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><text x="750" y="289" font-size="12" font-weight="600" fill="#F5F5F7">Pedido 1041</text><text x="750" y="304" font-size="10" fill="#86868B">Aprovado</text>
-    <rect x="712" y="324" width="126" height="48" rx="12" fill="#2C2C2E"/><circle cx="732" cy="348" r="11" fill="#3A3A3C"/><text x="750" y="345" font-size="12" font-weight="600" fill="#F5F5F7">Pedido 1040</text><text x="750" y="360" font-size="10" fill="#86868B">Em análise</text>
-    <rect x="716" y="398" width="118" height="36" rx="18" fill="#0071E3"/>
-    <text x="775" y="421" text-anchor="middle" font-size="13" font-weight="600" fill="#fff">Novo pedido</text>
-  </g>
-
-  <g class="pc pc3">
-    <rect x="40" y="428" width="248" height="58" rx="16" fill="#fff"/>
-    <circle cx="72" cy="457" r="14" fill="#0071E3"/><path d="M65.5 457.5l4.5 4.5 8-9.5" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="98" y="453" font-size="14" font-weight="600" fill="#1D1D1F">Parcela paga</text>
-    <text x="98" y="471" font-size="12" fill="#6E6E73">R$ 189,00 · Pix</text>
-  </g>
-
-  <g class="pc pc4">
-    <rect x="764" y="64" width="188" height="60" rx="16" fill="#fff"/>
-    <path d="M792 80Q795 96 810 99Q795 102 792 118Q789 102 774 99Q789 96 792 80Z" fill="#0071E3"/>
-    <text x="822" y="92" font-size="13" font-weight="600" fill="#1D1D1F">Nota lida pela IA</text>
-    <text x="822" y="110" font-size="11" fill="#6E6E73">12 campos extraídos</text>
-  </g>
-</svg>
-      <nav class="chips" aria-label="Atalhos para os serviços">
-        <a href="#sites">Sites</a>
-        <a href="#apps">Apps e sistemas</a>
-        <a href="#migracao">Migração</a>
-        <a href="#ia">IA e automação</a>
-        <a href="#credito">Crediário</a>
-      </nav>
+      <div class="parcelas" aria-hidden="true">
+        <div class="parcela paga"><small>1/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>2/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>3/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>4/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>5/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela paga"><small>6/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>7/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>8/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>9/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+        <div class="parcela"><small>10/10</small><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></div>
+      </div>
     </div>
   </section>
+
+  <div class="segmentos" aria-label="Segmentos que atendemos">
+    <div class="trilho">
+      <span>Cursos e escolas</span><span>Óticas</span><span>Móveis e eletro</span><span>Material de construção</span><span>Academias e estúdios</span><span>Autoescolas</span><span>Loteamentos</span><span>Moda e calçados</span>
+      <span aria-hidden="true">Cursos e escolas</span><span aria-hidden="true">Óticas</span><span aria-hidden="true">Móveis e eletro</span><span aria-hidden="true">Material de construção</span><span aria-hidden="true">Academias e estúdios</span><span aria-hidden="true">Autoescolas</span><span aria-hidden="true">Loteamentos</span><span aria-hidden="true">Moda e calçados</span>
+    </div>
+  </div>
 
   <section class="section white" id="servicos">
     <div class="wrap">
-      <h2>Nossos serviços</h2>
+      <h2>Crediário, cobrança e integração</h2>
       <p class="intro">A gente desenvolve, implanta e acompanha. Você fala direto com quem constrói.</p>
 
       <div class="features">
-        <div class="feature" id="sites">
+        <div class="feature">
           <div class="feature-text">
-            <h3>Sites</h3>
-            <p class="lead">Site institucional, página de vendas ou blog, pensado para levar quem chega a falar com você. Rápido, fácil de manter e com a cara da sua empresa.</p>
-            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre um site para a minha empresa." href="#contato">Conversar sobre um site</a>
+            <span class="num">01</span>
+            <h3>Implementação de crediário próprio</h3>
+            <p class="lead">Para começar a vender a prazo a quem não tem cartão ou limite, com regra clara de quem pode comprar. Serve para lojas, cursos, autoescolas e outros negócios que vendem parcelado.</p>
+            <ul class="ticks">
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Regra de crédito proposta pela Baran e ajustada com você: limite, entrada e número de parcelas.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Consulta ao Serasa antes de aprovar.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Contrato assinado pelo celular e carnê digital.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Automação de cobranças já incluída.</li>
+            </ul>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero saber sobre a implementação de crediário próprio." href="#contato">Conversar sobre crediário</a>
           </div>
-          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Um site aberto no navegador e no celular">
-  <rect x="50" y="36" width="340" height="236" rx="16" class="l-card"/>
-  <circle cx="74" cy="60" r="5" fill="#D2D2D7"/><circle cx="92" cy="60" r="5" fill="#D2D2D7"/><circle cx="110" cy="60" r="5" fill="#D2D2D7"/>
-  <rect x="130" y="52" width="170" height="16" rx="8" fill="#F5F5F7"/>
-  <line x1="50" y1="80" x2="390" y2="80" stroke="#D2D2D7" stroke-width="1.5"/>
-  <rect x="76" y="106" width="150" height="14" rx="7" class="l-ink"/>
-  <rect x="76" y="128" width="110" height="14" rx="7" class="l-ink"/>
-  <rect x="76" y="156" width="160" height="7" rx="3.5" class="l-bar"/>
-  <rect x="76" y="170" width="130" height="7" rx="3.5" class="l-bar"/>
-  <rect x="76" y="194" width="104" height="32" rx="16" class="l-blue"/>
-  <rect x="94" y="206" width="68" height="7" rx="3.5" fill="#fff"/>
-  <rect x="256" y="100" width="80" height="126" rx="12" class="l-ink"/>
-  <circle cx="296" cy="134" r="14" class="l-blue"/>
-  <path d="M264 216 L288 180 L304 200 L316 186 L330 216 Z" fill="#3A3A3C"/>
-  <rect x="76" y="240" width="80" height="20" rx="6" fill="#F5F5F7"/><rect x="168" y="240" width="80" height="20" rx="6" fill="#F5F5F7"/><rect x="260" y="240" width="80" height="20" rx="6" fill="#F5F5F7"/>
-  <path d="M152 214 L152 240 L159 233 L164 245 L170 243 L165 231 L174 231 Z" fill="#1D1D1F" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
-  <rect x="352" y="120" width="96" height="176" rx="18" fill="#fff" stroke="#1D1D1F" stroke-width="2.5"/>
-  <rect x="384" y="128" width="32" height="6" rx="3" class="l-ink"/>
-  <rect x="368" y="150" width="64" height="10" rx="5" class="l-ink"/>
-  <rect x="368" y="168" width="48" height="6" rx="3" class="l-bar"/>
-  <rect x="368" y="188" width="64" height="22" rx="11" class="l-blue"/>
-  <rect x="368" y="224" width="64" height="56" rx="8" class="l-ink"/>
-  <circle cx="386" cy="242" r="7" class="l-blue"/>
-  <path d="M374 276 L390 258 L400 268 L408 262 L426 276 Z" fill="#3A3A3C"/>
-</svg></div>
+          <div class="visual"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNvbnRyYXRvIGFzc2luYWRvIGNvbSBwYXJjZWxhcyI+CiAgPHJlY3QgeD0iMTU4IiB5PSI0NiIgd2lkdGg9IjE4NCIgaGVpZ2h0PSIyMzYiIHJ4PSIxOCIgZmlsbD0iIzFEMUQxRiIgb3BhY2l0eT0iLjA2Ii8+CiAgPHJlY3QgeD0iMTUwIiB5PSIzNiIgd2lkdGg9IjE4NCIgaGVpZ2h0PSIyMzYiIHJ4PSIxOCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxyZWN0IHg9IjE3NCIgeT0iNjQiIHdpZHRoPSI5MiIgaGVpZ2h0PSIxMiIgcng9IjYiIGZpbGw9IiMxRDFEMUYiLz4KICA8cmVjdCB4PSIxNzQiIHk9Ijk0IiB3aWR0aD0iMTM2IiBoZWlnaHQ9IjgiIHJ4PSI0IiBmaWxsPSIjRDJEMkQ3Ii8+CiAgPHJlY3QgeD0iMTc0IiB5PSIxMTIiIHdpZHRoPSIxMjAiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiNEMkQyRDciLz4KICA8cmVjdCB4PSIxNzQiIHk9IjEzMCIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI4IiByeD0iNCIgZmlsbD0iI0QyRDJENyIvPgogIDxyZWN0IHg9IjE3NCIgeT0iMTQ4IiB3aWR0aD0iOTYiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiNEMkQyRDciLz4KICA8cGF0aCBkPSJNMTgyIDIxNGMxMC0xOCAxOC0yMiAyMi0xMnMtNiAyMCA0IDE0IDE0LTI0IDIyLTE4LTIgMTYgOCAxNCAxNi0xMCAyNi0xMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDA3QUZGIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxsaW5lIHgxPSIxNzQiIHkxPSIyMzYiIHgyPSIzMTAiIHkyPSIyMzYiIHN0cm9rZT0iI0QyRDJENyIgc3Ryb2tlLXdpZHRoPSIyIi8+CiAgPHJlY3QgeD0iNTgiIHk9IjE3NiIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNiIgZmlsbD0iIzFEMUQxRiIvPgogIDx0ZXh0IHg9Ijc4IiB5PSIyMDgiIGZvbnQtZmFtaWx5PSJJbnRlciwgQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiNGRkZGRkYiPjEweDwvdGV4dD4KICA8Zz4KICAgIDxyZWN0IHg9Ijc4IiB5PSIyMjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjUiIGZpbGw9IiMwMDdBRkYiLz4KICAgIDxyZWN0IHg9IjEwNCIgeT0iMjI2IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjMDA3QUZGIi8+CiAgICA8cmVjdCB4PSIxMzAiIHk9IjIyNiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzAwN0FGRiIvPgogICAgPHJlY3QgeD0iMTU2IiB5PSIyMjYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjUiIGZpbGw9IiMzQTNBM0MiLz4KICAgIDxyZWN0IHg9IjE4MiIgeT0iMjI2IiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjM0EzQTNDIi8+CiAgICA8cmVjdCB4PSI3OCIgeT0iMjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjM0EzQTNDIi8+CiAgICA8cmVjdCB4PSIxMDQiIHk9IjI1MiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzNBM0EzQyIvPgogICAgPHJlY3QgeD0iMTMwIiB5PSIyNTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcng9IjUiIGZpbGw9IiMzQTNBM0MiLz4KICAgIDxyZWN0IHg9IjE1NiIgeT0iMjUyIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHJ4PSI1IiBmaWxsPSIjM0EzQTNDIi8+CiAgICA8cmVjdCB4PSIxODIiIHk9IjI1MiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiByeD0iNSIgZmlsbD0iIzNBM0EzQyIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSIzMzYiIGN5PSI1MiIgcj0iMzYiIGZpbGw9IiMwMDdBRkYiLz4KICA8cGF0aCBkPSJtMzIwIDUyIDExIDExIDIxLTIzIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iNDAwIiBjeT0iMjAwIiByPSIzMCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxwYXRoIGQ9Ik0zODkgMTkxaDIydjIyaC0yMnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFEMUQxRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CiAgPHBhdGggZD0iTTM5NCAxOTF2LTRhNiA2IDAgMCAxIDEyIDB2NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMUQxRDFGIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K" alt="Contrato assinado e carnê de dez parcelas" width="480" height="320" loading="lazy"></div>
         </div>
 
-        <div class="feature flip" id="apps">
+        <div class="feature flip">
           <div class="feature-text">
-            <h3>Apps e sistemas</h3>
-            <p class="lead">Aplicativos e sistemas de gestão feitos para o jeito como a sua empresa opera: pedidos, estoque, equipes, painéis e integração entre as ferramentas que você já usa.</p>
-            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre um app ou sistema sob medida." href="#contato">Conversar sobre um app ou sistema</a>
+            <span class="num">02</span>
+            <h3>Automação de cobranças</h3>
+            <p class="lead">Cobrança automatizada para as parcelas e mensalidades que você já vende.</p>
+            <ul class="ticks">
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Pix e boleto no nome da sua empresa, direto na sua conta.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Lembretes pelo WhatsApp antes, no dia e depois do vencimento.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Baixa automática e relatório todo mês.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Recuperação de atrasados: você paga com o que for recuperado.</li>
+            </ul>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero saber sobre a automação de cobranças." href="#contato">Conversar sobre cobranças</a>
           </div>
-          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Um aplicativo de pedidos no celular conectado a um painel com gráficos">
-  <path d="M176 160 C194 160 194 115 212 115" fill="none" stroke="#007AFF" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="176" cy="160" r="4.5" class="l-blue"/><circle cx="212" cy="115" r="4.5" class="l-blue"/>
-  <rect x="56" y="40" width="120" height="240" rx="22" fill="#fff" stroke="#1D1D1F" stroke-width="2.5"/>
-  <rect x="96" y="48" width="40" height="7" rx="3.5" class="l-ink"/>
-  <rect x="72" y="72" width="60" height="9" rx="4.5" class="l-ink"/>
-  <rect x="70" y="96" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="111" r="7" class="l-blue"/><path d="M80.5 111.5l2.5 2.5 4.5-5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="98" y="104" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="114" width="30" height="5" rx="2.5" class="l-bar"/>
-  <rect x="70" y="132" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="147" r="7" class="l-blue"/><path d="M80.5 147.5l2.5 2.5 4.5-5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="98" y="140" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="150" width="30" height="5" rx="2.5" class="l-bar"/>
-  <rect x="70" y="168" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="183" r="7" fill="#D2D2D7"/><rect x="98" y="176" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="186" width="30" height="5" rx="2.5" class="l-bar"/>
-  <rect x="70" y="204" width="92" height="30" rx="8" fill="#F5F5F7"/><circle cx="84" cy="219" r="7" fill="#D2D2D7"/><rect x="98" y="212" width="48" height="6" rx="3" class="l-ink"/><rect x="98" y="222" width="30" height="5" rx="2.5" class="l-bar"/>
-  <rect x="70" y="246" width="92" height="22" rx="11" fill="#F5F5F7"/>
-  <rect x="212" y="40" width="220" height="150" rx="16" class="l-card"/>
-  <rect x="230" y="58" width="70" height="9" rx="4.5" class="l-ink"/>
-  <rect x="376" y="56" width="40" height="20" rx="10" fill="#F5F5F7"/><circle cx="388" cy="66" r="4" class="l-blue"/>
-  <rect x="230" y="172" width="186" height="1.5" fill="#D2D2D7"/>
-  <rect x="232" y="136" width="22" height="34" rx="5" fill="#D2D2D7"/><rect x="262" y="118" width="22" height="52" rx="5" fill="#D2D2D7"/><rect x="292" y="126" width="22" height="44" rx="5" fill="#D2D2D7"/><rect x="322" y="96" width="22" height="74" rx="5" fill="#D2D2D7"/><rect x="352" y="74" width="22" height="96" rx="5" class="l-blue"/>
-  <rect x="212" y="206" width="104" height="74" rx="14" class="l-card"/>
-  <rect x="228" y="222" width="44" height="7" rx="3.5" class="l-bar"/><rect x="228" y="238" width="62" height="14" rx="7" class="l-ink"/><rect x="228" y="262" width="36" height="6" rx="3" class="l-blue"/>
-  <rect x="328" y="206" width="104" height="74" rx="14" class="l-card"/>
-  <rect x="344" y="222" width="44" height="7" rx="3.5" class="l-bar"/><rect x="344" y="238" width="48" height="14" rx="7" class="l-ink"/><rect x="344" y="262" width="36" height="6" rx="3" class="l-bar"/>
-</svg></div>
+          <div class="visual"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkNhbGVuZMOhcmlvIGRlIHZlbmNpbWVudG9zIGNvbSBsZW1icmV0ZSI+CiAgPHJlY3QgeD0iOTgiIHk9IjUyIiB3aWR0aD0iMjcyIiBoZWlnaHQ9IjI0MCIgcng9IjIwIiBmaWxsPSIjMUQxRDFGIiBvcGFjaXR5PSIuMDYiLz4KICA8cmVjdCB4PSI5MCIgeT0iNDIiIHdpZHRoPSIyNzIiIGhlaWdodD0iMjQwIiByeD0iMjAiIGZpbGw9IiNGRkZGRkYiLz4KICA8cGF0aCBkPSJNOTAgNjJhMjAgMjAgMCAwIDEgMjAtMjBoMjMyYTIwIDIwIDAgMCAxIDIwIDIwdjI2SDkweiIgZmlsbD0iIzFEMUQxRiIvPgogIDxyZWN0IHg9IjE0MCIgeT0iMzAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIyNiIgcng9IjUiIGZpbGw9IiNEMkQyRDciLz4KICA8cmVjdCB4PSIzMDIiIHk9IjMwIiB3aWR0aD0iMTAiIGhlaWdodD0iMjYiIHJ4PSI1IiBmaWxsPSIjRDJEMkQ3Ii8+CiAgPGcgZmlsbD0iI0Y1RjVGNyI+CiAgICA8cmVjdCB4PSIxMTAiIHk9IjEwNCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjE0NiIgeT0iMTA0IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+PHJlY3QgeD0iMTgyIiB5PSIxMDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIyMTgiIHk9IjEwNCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjI1NCIgeT0iMTA0IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+PHJlY3QgeD0iMjkwIiB5PSIxMDQiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIzMjYiIHk9IjEwNCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjI4IiByeD0iNyIvPgogICAgPHJlY3QgeD0iMTEwIiB5PSIxNDAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIxODIiIHk9IjE0MCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjIxOCIgeT0iMTQwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+PHJlY3QgeD0iMjkwIiB5PSIxNDAiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIzMjYiIHk9IjE0MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjI4IiByeD0iNyIvPgogICAgPHJlY3QgeD0iMTEwIiB5PSIxNzYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIxNDYiIHk9IjE3NiIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjE4MiIgeT0iMTc2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+PHJlY3QgeD0iMjU0IiB5PSIxNzYiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIyOTAiIHk9IjE3NiIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjMyNiIgeT0iMTc2IiB3aWR0aD0iMjAiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+CiAgICA8cmVjdCB4PSIxMTAiIHk9IjIxMiIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjE0NiIgeT0iMjEyIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+PHJlY3QgeD0iMTgyIiB5PSIyMTIiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjciLz48cmVjdCB4PSIyMTgiIHk9IjIxMiIgd2lkdGg9IjI4IiBoZWlnaHQ9IjI4IiByeD0iNyIvPjxyZWN0IHg9IjI5MCIgeT0iMjEyIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3Ii8+PHJlY3QgeD0iMzI2IiB5PSIyMTIiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyOCIgcng9IjciLz4KICAgIDxyZWN0IHg9IjExMCIgeT0iMjQ4IiB3aWR0aD0iMjgiIGhlaWdodD0iMTYiIHJ4PSI2Ii8+PHJlY3QgeD0iMTQ2IiB5PSIyNDgiIHdpZHRoPSIyOCIgaGVpZ2h0PSIxNiIgcng9IjYiLz48cmVjdCB4PSIxODIiIHk9IjI0OCIgd2lkdGg9IjI4IiBoZWlnaHQ9IjE2IiByeD0iNiIvPgogIDwvZz4KICA8Zz4KICAgIDxyZWN0IHg9IjE0NiIgeT0iMTQwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMDA3QUZGIi8+PHBhdGggZD0ibTE1MyAxNTQgNSA1IDktMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxyZWN0IHg9IjI1NCIgeT0iMTQwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMDA3QUZGIi8+PHBhdGggZD0ibTI2MSAxNTQgNSA1IDktMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxyZWN0IHg9IjIxOCIgeT0iMTc2IiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjMDA3QUZGIi8+PHBhdGggZD0ibTIyNSAxOTAgNSA1IDktMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICAgIDxyZWN0IHg9IjI1NCIgeT0iMjEyIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIHJ4PSI3IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMwMDdBRkYiIHN0cm9rZS13aWR0aD0iMyIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSIzODgiIGN5PSI4NCIgcj0iNDAiIGZpbGw9IiMwMDdBRkYiLz4KICA8cGF0aCBkPSJNMzc0IDk2di0xMmExNCAxNCAwIDAgMSAyOCAwdjEybDQgNGgtMzZ6IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0zODMgMTA2aDEwIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGNpcmNsZSBjeD0iNDEwIiBjeT0iNTgiIHI9IjkiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+Cg==" alt="Calendário com vencimentos pagos e lembrete" width="480" height="320" loading="lazy"></div>
         </div>
 
-        <div class="feature" id="migracao">
+        <div class="feature">
           <div class="feature-text">
-            <h3>Migração de sistemas</h3>
-            <p class="lead">Seu sistema ficou pequeno, caro ou preso a uma plataforma? A gente leva do Bubble e de outras plataformas no-code, ou de sistemas antigos, para código próprio, por partes e sem parar a operação.</p>
-            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre a migração de um sistema." href="#contato">Conversar sobre migração</a>
+            <span class="num">03</span>
+            <h3>Integração com os sistemas da empresa</h3>
+            <p class="lead">Para o crediário e a cobrança conversarem com o que a sua empresa já usa, sem você trocar o que já funciona.</p>
+            <ul class="ticks">
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Conexão com o seu sistema de vendas, ERP ou planilha.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Baixa automática dos pagamentos no seu sistema.</li>
+              <li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Painéis com parcelas a vencer, pagas e em atraso.</li>
+            </ul>
+            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre integrar o crediário e a cobrança aos sistemas da minha empresa." href="#contato">Conversar sobre integrações</a>
           </div>
-          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Migração por partes de uma plataforma atual para código próprio, sem parar a operação">
-  <rect x="36" y="56" width="150" height="150" rx="16" fill="#fff" stroke="#86868B" stroke-width="1.5" stroke-dasharray="5 5"/>
-  <rect x="52" y="76" width="118" height="22" rx="6" fill="#D2D2D7"/><rect x="52" y="106" width="118" height="22" rx="6" fill="#D2D2D7"/><rect x="52" y="136" width="118" height="22" rx="6" fill="#D2D2D7"/><rect x="52" y="166" width="118" height="22" rx="6" fill="#D2D2D7"/>
-  <rect x="294" y="56" width="150" height="150" rx="16" fill="#1D1D1F"/>
-  <rect x="310" y="76" width="118" height="22" rx="6" fill="#007AFF"/><rect x="310" y="106" width="118" height="22" rx="6" fill="#007AFF"/><rect x="310" y="136" width="118" height="22" rx="6" fill="#3A3A3C"/><rect x="310" y="166" width="118" height="22" rx="6" fill="#3A3A3C"/>
-  <g class="pill" style="--o:1"><rect x="206" y="82" width="68" height="22" rx="11" class="l-blue"/><rect x="220" y="90" width="40" height="6" rx="3" fill="#fff"/></g>
-  <g class="pill" style="--o:.7"><rect x="206" y="118" width="68" height="22" rx="11" class="l-blue"/><rect x="220" y="126" width="40" height="6" rx="3" fill="#fff"/></g>
-  <g class="pill" style="--o:.4"><rect x="206" y="154" width="68" height="22" rx="11" class="l-blue"/><rect x="220" y="162" width="40" height="6" rx="3" fill="#fff"/></g>
-  <text x="111" y="232" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Hoje</text>
-  <text x="369" y="232" text-anchor="middle" font-size="19" font-weight="600" fill="#1D1D1F">Código próprio</text>
-  <rect x="36" y="262" width="408" height="8" rx="4" fill="#D2D2D7"/>
-  <rect class="prog l-blue" x="36" y="262" width="272" height="8" rx="4"/>
-  <circle cx="40" cy="266" r="8" fill="#007AFF" stroke="#F5F5F7" stroke-width="3"/><circle cx="240" cy="266" r="8" fill="#007AFF" stroke="#F5F5F7" stroke-width="3"/><circle cx="440" cy="266" r="8" fill="#D2D2D7" stroke="#F5F5F7" stroke-width="3"/>
-  <text x="36" y="300" font-size="19" font-weight="500" fill="#86868B">Mapear</text>
-  <text x="240" y="300" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Migrar</text>
-  <text x="444" y="300" text-anchor="end" font-size="19" font-weight="500" fill="#86868B">Desligar</text>
-</svg></div>
-        </div>
-
-        <div class="feature flip" id="ia">
-          <div class="feature-text">
-            <h3>IA e automação</h3>
-            <p class="lead">Comece pequeno: encontramos juntos onde a IA economiza tempo ou dinheiro na sua operação, como leitura de documentos, atendimento e relatórios, e colocamos a primeira automação para funcionar.</p>
-            <a class="link" data-wa="Olá! Vim pelo site da Baran e quero falar sobre IA e automação na minha empresa." href="#contato">Conversar sobre IA</a>
-          </div>
-          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Um documento passa pela IA e vira dados organizados">
-  <rect x="40" y="70" width="110" height="150" rx="12" class="l-card"/>
-  <rect x="56" y="88" width="50" height="8" rx="4" class="l-ink"/>
-  <rect x="56" y="108" width="78" height="6" rx="3" class="l-bar"/><rect x="56" y="122" width="62" height="6" rx="3" class="l-bar"/><rect x="56" y="136" width="78" height="6" rx="3" class="l-bar"/>
-  <rect x="56" y="166" width="78" height="1.5" fill="#D2D2D7"/>
-  <rect x="56" y="182" width="40" height="7" rx="3.5" class="l-bar"/><rect x="100" y="180" width="34" height="11" rx="5.5" class="l-ink"/>
-  <path d="M160 145 H196 M189 138 L197 145 L189 152" fill="none" stroke="#86868B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="204" y="107" width="72" height="72" rx="20" fill="#1D1D1F"/>
-  <path class="spark" d="M240 123 Q243 140 260 143 Q243 146 240 163 Q237 146 220 143 Q237 140 240 123Z" fill="#007AFF"/>
-  <path d="M262 114 Q263 120 269 121 Q263 122 262 128 Q261 122 255 121 Q261 120 262 114Z" fill="#fff"/>
-  <path d="M284 145 H320 M313 138 L321 145 L313 152" fill="none" stroke="#86868B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="330" y="70" width="110" height="150" rx="12" class="l-card"/>
-  <rect x="330" y="70" width="110" height="28" rx="12" fill="#F5F5F7"/><rect x="330" y="86" width="110" height="12" fill="#F5F5F7"/>
-  <rect x="342" y="80" width="30" height="7" rx="3.5" class="l-bar"/>
-  <rect x="342" y="112" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="112" width="36" height="6" rx="3" class="l-blue"/>
-  <line x1="342" y1="128" x2="428" y2="128" stroke="#F5F5F7" stroke-width="2"/>
-  <rect x="342" y="140" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="140" width="36" height="6" rx="3" class="l-ink"/>
-  <line x1="342" y1="156" x2="428" y2="156" stroke="#F5F5F7" stroke-width="2"/>
-  <rect x="342" y="168" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="168" width="36" height="6" rx="3" class="l-ink"/>
-  <line x1="342" y1="184" x2="428" y2="184" stroke="#F5F5F7" stroke-width="2"/>
-  <rect x="342" y="196" width="34" height="6" rx="3" class="l-bar"/><rect x="392" y="196" width="36" height="6" rx="3" class="l-ink"/>
-  <text x="95" y="252" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Documento</text>
-  <text x="240" y="208" text-anchor="middle" font-size="19" font-weight="600" fill="#1D1D1F">IA</text>
-  <text x="385" y="252" text-anchor="middle" font-size="19" font-weight="500" fill="#86868B">Dados</text>
-</svg></div>
-        </div>
-
-        <div class="feature" id="credito">
-          <div class="feature-text">
-            <h3>Crediário e cobrança</h3>
-            <p class="lead">Para quem vende parcelado: implementação de crediário próprio e automação de cobranças, com Pix e boleto no nome da sua empresa e lembretes pelo WhatsApp.</p>
-            <a class="link" href="crediario.html">Ver a página de crediário</a>
-          </div>
-          <div class="visual"><svg viewBox="0 0 480 320" role="img" aria-label="Carnê com seis de dez parcelas pagas e um lembrete de vencimento no WhatsApp"><rect x="60" y="44" width="360" height="206" rx="18" class="l-card"/><rect x="84" y="66" width="96" height="10" rx="5" class="l-ink"/><rect x="84" y="84" width="64" height="7" rx="3.5" class="l-bar"/><rect x="330" y="62" width="66" height="24" rx="12" fill="#F5F5F7"/><circle cx="346" cy="74" r="5" class="l-blue"/><rect x="356" y="71" width="30" height="6" rx="3" class="l-bar"/><rect x="84" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M101 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="148" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M165 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="212" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M229 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="276" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M293 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="340" y="112" width="56" height="52" rx="10" class="l-blue"/><path d="M357 139 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="84" y="172" width="56" height="52" rx="10" class="l-blue"/><path d="M101 199 l8 8 14-16" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="148" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="162" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><rect x="212" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="226" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><rect x="276" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="290" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><rect x="340" y="172" width="56" height="52" rx="10" fill="#F5F5F7"/><rect x="354" y="195" width="28" height="6" rx="3" fill="#D2D2D7"/><g><rect x="286" y="212" width="152" height="58" rx="16" fill="#1D1D1F"/><path d="M306 270 L298 286 L324 270 Z" fill="#1D1D1F"/><rect x="302" y="228" width="104" height="7" rx="3.5" fill="#fff"/><rect x="302" y="244" width="66" height="7" rx="3.5" fill="#86868B"/><circle cx="420" cy="228" r="5" class="l-blue"/></g></svg></div>
+          <div class="visual"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgMzIwIiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IlNpc3RlbWFzIGNvbmVjdGFkb3MiPgogIDxwYXRoIGQ9Ik0xOTAgMTYwaDQwTTI1MCAxNjBjNDAgMCA0MC04MCA4MC04ME0yNTAgMTYwYzQwIDAgNDAgODAgODAgODAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0QyRDJENyIgc3Ryb2tlLXdpZHRoPSIzIi8+CiAgPGNpcmNsZSBjeD0iMjQwIiBjeT0iMTYwIiByPSIxMiIgZmlsbD0iIzAwN0FGRiIvPgogIDxyZWN0IHg9IjQ4IiB5PSIxMDQiIHdpZHRoPSIxNDgiIGhlaWdodD0iMTEyIiByeD0iMTgiIGZpbGw9IiMxRDFEMUYiLz4KICA8dGV4dCB4PSIxMjIiIHk9IjE3MCIgZm9udC1mYW1pbHk9IkludGVyLCBBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iIzAwN0FGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Jmx0Oy8mZ3Q7PC90ZXh0PgogIDxyZWN0IHg9IjMzMCIgeT0iMzYiIHdpZHRoPSIxMTYiIGhlaWdodD0iODgiIHJ4PSIxNiIgZmlsbD0iI0ZGRkZGRiIvPgogIDxyZWN0IHg9IjM0OCIgeT0iNTgiIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMCIgcng9IjUiIGZpbGw9IiMxRDFEMUYiLz4KICA8cmVjdCB4PSIzNDgiIHk9Ijc4IiB3aWR0aD0iODAiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiNEMkQyRDciLz4KICA8cmVjdCB4PSIzNDgiIHk9Ijk0IiB3aWR0aD0iNjQiIGhlaWdodD0iOCIgcng9IjQiIGZpbGw9IiNEMkQyRDciLz4KICA8cmVjdCB4PSIzMzAiIHk9IjE5NiIgd2lkdGg9IjExNiIgaGVpZ2h0PSI4OCIgcng9IjE2IiBmaWxsPSIjRkZGRkZGIi8+CiAgPHJlY3QgeD0iMzUwIiB5PSIyNTIiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNiIgcng9IjMiIGZpbGw9IiNEMkQyRDciLz4KICA8cmVjdCB4PSIzNzAiIHk9IjIzOCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjMwIiByeD0iMyIgZmlsbD0iI0QyRDJENyIvPgogIDxyZWN0IHg9IjM5MCIgeT0iMjI2IiB3aWR0aD0iMTQiIGhlaWdodD0iNDIiIHJ4PSIzIiBmaWxsPSIjMDA3QUZGIi8+CiAgPHJlY3QgeD0iNDEwIiB5PSIyNDQiIHdpZHRoPSIxNCIgaGVpZ2h0PSIyNCIgcng9IjMiIGZpbGw9IiNEMkQyRDciLz4KICA8Y2lyY2xlIGN4PSIzMzAiIGN5PSI4MCIgcj0iNiIgZmlsbD0iIzAwN0FGRiIvPgogIDxjaXJjbGUgY3g9IjMzMCIgY3k9IjI0MCIgcj0iNiIgZmlsbD0iIzAwN0FGRiIvPgo8L3N2Zz4K" alt="Sistemas conectados entre si" width="480" height="320" loading="lazy"></div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- RASCUNHO: princípios tirados da tese da Baran. Reescrever na sua voz (tarefa do manifesto). -->
-  <section class="section dark" id="como-pensamos">
-    <div class="wrap">
-      <h2>Como a gente pensa a Baran.</h2>
-      <p class="intro">Antes de escolher uma software house, vale saber como ela pensa. A gente acredita em tecnologia para melhorar a vida das pessoas, e trabalha assim.</p>
-      <div class="pillars">
-        <article class="pillar">
-          <div class="icon"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg></div>
-          <h3>Entender o problema antes de escrever código.</h3>
-          <p>Tecnologia sozinha não resolve nada. Primeiro a gente entende a sua operação. Depois decide o que construir.</p>
-        </article>
-        <article class="pillar">
-          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M4 19h4v-4h4v-4h4V7h4"/></svg></div>
-          <h3>Começar pequeno e validar.</h3>
-          <p>Preferimos uma primeira versão pequena, no ar e em uso, a um projeto grande que demora para provar valor.</p>
-        </article>
-        <article class="pillar">
-          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8Z"/><path d="M19 17v4M17 19h4"/></svg></div>
-          <h3>IA para decidir melhor, não só para automatizar.</h3>
-          <p>Usamos IA onde ela ajuda a empresa a entender seus dados, enxergar oportunidades e tomar decisões melhores.</p>
-        </article>
-        <article class="pillar">
-          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></div>
-          <h3>Tratar bem cada pessoa.</h3>
-          <p>Clientes e equipe merecem clareza, prazo cumprido e conversa direta, sem intermediários.</p>
-        </article>
-      </div>
+      <p class="nota"><b>Crediário ou cobrança?</b> A automação de cobranças cuida do que você já vendeu. O crediário próprio decide para quem vender a prazo e já inclui a cobrança.</p>
     </div>
   </section>
 
   <section class="section light" id="cases">
     <div class="wrap">
       <h2>Cases</h2>
-      <p class="intro">Projetos de crédito, cobrança e gestão que o João já construiu e liderou.</p>
+      <p class="intro">Projeto de crédito e cobrança que o João já construiu e liderou.</p>
       <div class="cases">
         <article class="case">
           <div>
@@ -534,28 +424,28 @@
 </svg></div>
           <ul class="ticks"><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Motor de análise de crédito.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Plataforma de cobrança.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>API pública para parceiros.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Análise de documentos com IA.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Confirmação de agendamentos.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Criação de subcontas de pagamento.</li></ul>
         </article>
-        <article class="case">
-          <div>
-            <span class="kind">Sistema sob medida</span>
-            <h3>Mariah Sá</h3>
-            <p>Marca de acessórios femininos com uma rede de revendedoras. Antes, os pedidos eram tirados em planilhas. Hoje, tudo acontece no sistema que a Baran desenvolveu.</p>
-            <div class="tags"><span>Gestão</span><span>Estoque</span><span>Pedidos</span></div>
-          </div>
-          <div class="visual"><svg viewBox="0 0 480 220" role="img" aria-label="Planilhas de pedidos dando lugar a um sistema de gestão">
-  <rect x="28" y="36" width="170" height="148" rx="12" class="l-card"/>
-  <rect x="28" y="36" width="170" height="24" rx="12" fill="#D2D2D7"/><rect x="28" y="48" width="170" height="12" fill="#D2D2D7"/>
-  <g stroke="#D2D2D7" stroke-width="1.5"><line x1="62" y1="36" x2="62" y2="184"/><line x1="96" y1="36" x2="96" y2="184"/><line x1="130" y1="36" x2="130" y2="184"/><line x1="164" y1="36" x2="164" y2="184"/><line x1="28" y1="84" x2="198" y2="84"/><line x1="28" y1="108" x2="198" y2="108"/><line x1="28" y1="132" x2="198" y2="132"/><line x1="28" y1="156" x2="198" y2="156"/></g>
-  <g fill="#86868B" opacity=".6"><rect x="36" y="68" width="18" height="5" rx="2.5"/><rect x="70" y="68" width="18" height="5" rx="2.5"/><rect x="104" y="68" width="18" height="5" rx="2.5"/><rect x="138" y="68" width="18" height="5" rx="2.5"/><rect x="36" y="92" width="18" height="5" rx="2.5"/><rect x="104" y="92" width="18" height="5" rx="2.5"/><rect x="70" y="116" width="18" height="5" rx="2.5"/><rect x="138" y="116" width="18" height="5" rx="2.5"/><rect x="36" y="140" width="18" height="5" rx="2.5"/><rect x="104" y="140" width="18" height="5" rx="2.5"/><rect x="170" y="140" width="18" height="5" rx="2.5"/><rect x="70" y="164" width="18" height="5" rx="2.5"/></g>
-  <path d="M210 110 H256 M249 103 L257 110 L249 117" fill="none" stroke="#007AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <rect x="274" y="36" width="182" height="148" rx="14" class="l-card"/>
-  <rect x="274" y="36" width="44" height="148" rx="14" fill="#1D1D1F"/><rect x="304" y="36" width="14" height="148" fill="#1D1D1F"/>
-  <rect x="288" y="56" width="16" height="16" rx="4" class="l-blue"/><rect x="288" y="84" width="16" height="16" rx="4" fill="#3A3A3C"/><rect x="288" y="112" width="16" height="16" rx="4" fill="#3A3A3C"/>
-  <rect x="332" y="50" width="110" height="26" rx="8" fill="#F5F5F7"/><circle cx="346" cy="63" r="5" class="l-blue"/><rect x="358" y="60" width="50" height="6" rx="3" class="l-ink"/>
-  <rect x="332" y="82" width="110" height="26" rx="8" fill="#F5F5F7"/><circle cx="346" cy="95" r="5" class="l-blue"/><rect x="358" y="92" width="40" height="6" rx="3" class="l-ink"/>
-  <rect x="332" y="114" width="110" height="26" rx="8" fill="#F5F5F7"/><circle cx="346" cy="127" r="5" fill="#D2D2D7"/><rect x="358" y="124" width="46" height="6" rx="3" class="l-ink"/>
-  <rect x="334" y="164" width="14" height="12" rx="3" fill="#D2D2D7"/><rect x="356" y="156" width="14" height="20" rx="3" fill="#D2D2D7"/><rect x="378" y="148" width="14" height="28" rx="3" class="l-blue"/><rect x="400" y="160" width="14" height="16" rx="3" fill="#D2D2D7"/><rect x="422" y="154" width="14" height="22" rx="3" fill="#D2D2D7"/>
-</svg></div>
-          <ul class="ticks"><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Gestão de revendedoras.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Controle de estoque.</li><li><svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>Pedidos das revendedoras no sistema, no lugar das planilhas.</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="garantias">
+    <div class="wrap">
+      <h2>Seu dinheiro e suas regras continuam com você.</h2>
+      <div class="pillars tres">
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>O dinheiro cai na sua conta.</h3>
+          <p>Não recebemos nem guardamos nenhum valor. Cada Pix e boleto sai no nome da sua empresa.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>O cliente sabe de quem é a cobrança.</h3>
+          <p>Cada mensagem identifica a sua empresa e segue o tom que você aprovar, sempre com respeito e dentro do Código de Defesa do Consumidor.</p>
+        </article>
+        <article class="pillar">
+          <div class="icon"><svg class="i" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></div>
+          <h3>Nós propomos, você aprova.</h3>
+          <p>A Baran propõe a regra de crédito, os acordos e o tom das mensagens. Você aprova e pode ajustar quando quiser.</p>
         </article>
       </div>
     </div>
@@ -565,10 +455,10 @@
     <div class="wrap">
       <h2>Como funciona</h2>
       <ol class="steps">
-        <li><h3>Conversa</h3><p>Uma conversa, sem custo, para entender como a sua empresa funciona e o que precisa mudar.</p></li>
-        <li><h3>Proposta</h3><p>Uma proposta de uma página, com escopo, prazo e preço fechado.</p></li>
-        <li><h3>Construção</h3><p>Entregas curtas, com você acompanhando cada etapa.</p></li>
-        <li><h3>Acompanhamento</h3><p>Ajustes e suporte depois que o projeto entra no ar.</p></li>
+        <li><h3>Conversa</h3><p>Uma conversa, sem custo, para entender como a sua empresa vende e recebe hoje.</p></li>
+        <li><h3>Proposta</h3><p>Uma proposta de uma página, com escopo, prazo e preço.</p></li>
+        <li><h3>Implantação</h3><p>Configuramos tudo e treinamos a sua equipe.</p></li>
+        <li><h3>Acompanhamento</h3><p>Relatório todo mês e ajustes com base nos números.</p></li>
       </ol>
     </div>
   </section>
@@ -596,11 +486,13 @@
   <section class="section light faq" id="duvidas">
     <div class="wrap">
       <h2>Dúvidas comuns</h2>
-      <div class="pillars">
-        <article class="pillar"><h3>Quanto custa?</h3><p>Depende do escopo. Depois da primeira conversa, você recebe uma proposta de uma página com escopo, prazo e preço fechado.</p></article>
+      <div class="pillars tres">
+        <article class="pillar"><h3>Preciso trocar meu sistema?</h3><p>Não. Trabalhamos a partir do que você usa hoje, seja sistema ou planilha.</p></article>
+        <article class="pillar"><h3>O dinheiro passa pela Baran?</h3><p>Não. Pix e boleto são emitidos na conta da sua empresa. Não recebemos nem guardamos nenhum valor.</p></article>
         <article class="pillar"><h3>Vocês atendem fora da minha cidade?</h3><p>Sim. Atendemos on-line em qualquer lugar e presencialmente em Santa Catarina.</p></article>
-        <article class="pillar"><h3>Preciso trocar meu sistema?</h3><p>Não necessariamente. Trabalhamos a partir do que você usa hoje, seja sistema ou planilha, e só trocamos o que vale a pena trocar.</p></article>
-        <article class="pillar"><h3>Não sei por onde começar. E agora?</h3><p>Comece pela conversa. Nela, a gente aponta o menor projeto que já traz resultado para a sua empresa.</p></article>
+        <article class="pillar"><h3>Quem define a regra de crédito?</h3><p>A Baran propõe, a partir da experiência de quem já construiu motores de análise de crédito. Você aprova e pode ajustar.</p></article>
+        <article class="pillar"><h3>E se o cliente não pagar?</h3><p>O risco do crédito continua sendo da sua empresa. Nosso trabalho é diminuí-lo com uma boa regra de crédito e uma cobrança que não esquece ninguém.</p></article>
+        <article class="pillar"><h3>Quanto custa?</h3><p>Depende do serviço e do volume de parcelas. Depois da primeira conversa, você recebe uma proposta de uma página com escopo, prazo e preço.</p></article>
       </div>
     </div>
   </section>
@@ -618,7 +510,7 @@
   <div class="wrap">
     <div class="rodape">
       <div class="marca">
-        <a class="wordmark" href="#topo"><b>Baran</b><span>Tecnologia</span></a>
+        <a class="wordmark" href="/"><b>Baran</b><span>Tecnologia</span></a>
         <p>Software house butique: sites, apps, sistemas, migração e IA.</p>
       </div>
       <div>
@@ -629,8 +521,8 @@
       </div>
       <div>
         <h3>Navegação</h3>
-        <a href="#servicos">Serviços</a>
-        <a href="crediario.html">Crediário e cobrança</a>
+        <a href="/#servicos">Serviços</a>
+        <a href="#topo">Crediário e cobrança</a>
         <a href="#cases">Cases</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#duvidas">Dúvidas</a>
