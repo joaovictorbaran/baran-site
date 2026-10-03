@@ -43,3 +43,9 @@ Revisar esta decisão se o site ganhar área logada, formulários com API própr
 - **Lighthouse (celular, servidor local, uma rodada):** home 87 → 93 e crediário 88 → 95 em desempenho; acessibilidade, boas práticas e SEO seguem em 100. FCP de 3,1 s para 1,9 s (home) e 1,7 s (crediário). Peso transferido de 135 para 102 KB (home) e de 128 para 91 KB (crediário).
 - **Foto:** saiu do HTML (antes duplicada em data URI nas duas páginas) e virou um arquivo único em `/_astro/`, com cache. Não foi recodificada, porque a otimização de imagens do Astro exige a dependência `sharp`, fora do combinado (só `astro`). Se quisermos WebP, abrir issue para adicionar o `sharp`.
 - **Vercel:** Framework Preset Astro, comando `pnpm build`, saída `dist`.
+
+## Atualização (02/10/2026, BAR-60): exceção para o `sharp`
+
+- **Decisão:** o `sharp` entra como segunda dependência, só de build, para a foto do João ficar nítida em telas 2x e 3x. Nada dele chega ao navegador.
+- **Como:** a fonte é um JPEG de 1333×2000 em `src/assets/`; o componente `QuemSomos` usa `<Picture>` com WebP em 380, 760 e 1140 px, `sizes` coerente com o layout, `loading="lazy"` e o recorte ancorado no topo para preservar o rosto. A foto de 24 KB citada acima foi substituída.
+- **Regra mantida:** nenhuma outra dependência sem issue.
