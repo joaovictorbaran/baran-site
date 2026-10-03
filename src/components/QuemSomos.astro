@@ -1,9 +1,10 @@
 ---
+import { Picture } from 'astro:assets';
 import foto from '../assets/joao-baran.jpg';
 ---
   <section class="section about" id="quem-somos">
     <div class="wrap grid">
-      <img src={foto.src} alt="João Baran, fundador da Baran Tecnologia" width="405" height="506" loading="lazy">
+      <Picture src={foto} alt="João Baran, fundador da Baran Tecnologia" formats={['webp']} widths={[380, 760, 1140]} sizes="(max-width: 900px) 360px, 380px" width={380} height={506} position="top" loading="lazy" decoding="async" />
       <div>
         <h2>Quem está por trás</h2>
         <p>A Baran Tecnologia é uma software house butique liderada por João Baran, que construiu e liderou a tecnologia de uma fintech de crédito, de desenvolvedor a CTO.</p>
