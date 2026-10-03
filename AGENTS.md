@@ -44,6 +44,7 @@ A `main` é produção: o Vercel publica automaticamente a cada merge, e cada PR
 - **Exceção aprovada pelo João (ilustração do hero da home):** ela mostra um sistema de gestão **genérico** (painel e celular), com dados **fictícios** e endereço fictício (`app.suaempresa.com.br`). Fora isso, as ilustrações continuam abstratas.
 - **Cases:** a Parcela Mais aparece como "Trajetória do fundador", nunca como cliente da Baran. Não mencione que o João foi sócio.
 - **Números da Parcela Mais:** o bloco `.numeros` (seção "Quem está por trás") permanece, **confirmado pelo João em 02/10/2026**. A conferência do acordo de saída continua como tarefa no Notion e não bloqueia o bloco.
+- **Seção "Como a gente pensa um projeto" (home):** o texto (título e quatro princípios, aprovados pelo João em 03/10/2026) vem do João. O agente não escreve, não adapta e não acrescenta texto nessa seção; qualquer mudança vem de comentário do João na issue. Não há página Sobre nem manifesto no site.
 - **Crédito:** consulta ao **Serasa**, sem citar SPC.
 - **Atendimento:** on-line em qualquer lugar e presencial em Santa Catarina.
 - **Rodapé:** "Baran Tecnologia LTDA", CNPJ 49.100.682/0001-01 e e-mail contato@joaobaran.com.
