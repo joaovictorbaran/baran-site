@@ -1,3 +1,19 @@
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url("/fonts/inter-latin.woff2") format("woff2");
+  }
+  /* Fonte provisória com as métricas da Inter, para a troca não deslocar o layout */
+  @font-face {
+    font-family: "Inter Fallback";
+    src: local("Arial");
+    ascent-override: 90.2%;
+    descent-override: 22.48%;
+    line-gap-override: 0%;
+    size-adjust: 107.4%;
+  }
   :root {
     --black: #000000;
     --space: #1D1D1F;
@@ -7,7 +23,7 @@
     --blue: #007AFF;
     --blue-hover: #0066D6;
     --blue-button: #0071E3; /* botões: 4,7:1 com texto branco */
-    --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    --font: "Inter", "Inter Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --wrap: 1080px;
   }
   *, *::before, *::after { box-sizing: border-box; }
